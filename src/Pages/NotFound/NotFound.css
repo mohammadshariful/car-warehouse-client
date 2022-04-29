@@ -4,6 +4,8 @@
   align-items: center;
   height: 70vh;
   margin-top: 30px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 .notFound-info h2 {
   color: #e21717;
