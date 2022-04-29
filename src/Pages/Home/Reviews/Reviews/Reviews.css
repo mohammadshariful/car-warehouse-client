@@ -1,0 +1,10 @@
+.reviews-container {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.star {
+  color: #008000;
+}
+.star-container {
+  margin: 0;
+}
