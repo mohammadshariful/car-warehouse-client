@@ -5,10 +5,14 @@ import locatinIcon from "../../../Assets/Icons/location.png";
 import carLogo from "../../../Assets/Icons/logo.png";
 import phoneIcon from "../../../Assets/Icons/phone.png";
 import car1 from "../../../Assets/Images/pic1.jpg";
+import car2 from "../../../Assets/Images/pic2.jpg";
+import car3 from "../../../Assets/Images/pic3.jpg";
 import "./Footer.css";
 const Footer = () => {
+  const date = new Date();
+  const fullYear = date.getFullYear();
   return (
-    <footer className="footer-container py-4 mt-5">
+    <footer className="footer-container pt-4 mt-5">
       <Container>
         <Row>
           <Col md={3}>
@@ -20,8 +24,10 @@ const Footer = () => {
                 </h3>
               </div>
               <p>
-                CarZone is simply dummy text of the print ing and in type
-                setting industry. Lorem Ipsum has bee the industry's standard...
+                Buying a car is a huge decision and may come with a lot of
+                pressure. It is very crucial that you're armed with the proper
+                information about the vehicle you are interested in, the value
+                of your trade in if you have one and the budget you can afford.
               </p>
               <div>
                 <p className="footer-contact">
@@ -87,7 +93,7 @@ const Footer = () => {
                 <div className="post-two">
                   <img src="" alt="" />
                   <div className="d-flex">
-                    <img src={car1} alt="" />
+                    <img src={car2} alt="" />
                     <div className="mx-1">
                       <h6>Time to change...</h6>
                       <p>
@@ -99,7 +105,7 @@ const Footer = () => {
                 <div className="post-three">
                   <img src="" alt="" />
                   <div className="d-flex">
-                    <img src={car1} alt="" />
+                    <img src={car3} alt="" />
                     <div className="mx-1">
                       <h6>Time to change...</h6>
                       <p>
@@ -127,15 +133,17 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
-        <div className="coyright">
-          <p>&copy; Copyright 2021 Car Dealer Developed By DexignLab</p>
-          <p className="copyright-link">
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Privacy Policy Us</li>
-          </p>
-        </div>
       </Container>
+      <div className="coyright">
+        <p>
+          &copy; Copyright {fullYear} Car Rev Developed By Mohammad Shariful
+        </p>
+        <p className="copyright-link">
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Privacy Policy Us</li>
+        </p>
+      </div>
     </footer>
   );
 };
