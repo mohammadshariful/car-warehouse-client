@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #6024eb;
+  background-color: #5050ee;
   color: #f8f8f8de;
   clip-path: ellipse(105% 100% at 63.75% 100%);
 }
@@ -14,7 +14,7 @@
   font-size: 25px;
 }
 .footer-header .color-one {
-  color: #e21717;
+  color: #ff2f9b;
 }
 .footer-contact {
   display: flex;
@@ -27,7 +27,7 @@ ul li {
   border-bottom: 1px dotted #f8f8f8de;
 }
 .recent-posts-container h6 {
-  color: #e21717;
+  color: #ff2f9b;
 }
 .recent-posts-container img {
   width: 100px;
@@ -46,7 +46,7 @@ ul li {
   display: block;
   width: 100%;
   border: 1px solid #e2171752;
-  background-color: #e217179a;
+  background-color: #ff2f9b;
   padding: 12px 0;
   color: #fff;
   transition: 0.3s linear;
