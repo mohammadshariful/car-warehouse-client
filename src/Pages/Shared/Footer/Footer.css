@@ -1,6 +1,7 @@
 .footer-container {
-  background-color: #191f23;
+  background-color: #6024eb;
   color: #f8f8f8de;
+  clip-path: ellipse(105% 100% at 63.75% 100%);
 }
 .footer-container h3 {
   font-weight: 300;
@@ -8,13 +9,6 @@
 .footer-container p {
   font-weight: 200;
   font-size: 15px;
-}
-.footer-header {
-  display: flex;
-  align-items: center;
-}
-.footer-header img {
-  width: 50px;
 }
 .footer-header h3 {
   font-size: 25px;
@@ -44,15 +38,15 @@ ul li {
   outline: 0;
   width: 100%;
   color: #f8f8f8de;
-  background-color: #303233;
+  background-color: #30323381;
   padding: 8px 20px;
   margin-bottom: 10px;
 }
 .newsletter-container button {
   display: block;
   width: 100%;
-  border: 1px solid #e21717;
-  background-color: #e21717;
+  border: 1px solid #e2171752;
+  background-color: #e217179a;
   padding: 12px 0;
   color: #fff;
   transition: 0.3s linear;
@@ -76,6 +70,9 @@ ul li {
   margin: 0 10px;
 }
 @media only screen and (max-width: 576px) {
+  .footer-container {
+    clip-path: ellipse(300% 100% at 50% 100%);
+  }
   .newsletter-container button {
     padding: 8px 0;
   }

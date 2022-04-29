@@ -2,7 +2,6 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaAngleRight, FaComment } from "react-icons/fa";
 import locatinIcon from "../../../Assets/Icons/location.png";
-import carLogo from "../../../Assets/Icons/logo.png";
 import phoneIcon from "../../../Assets/Icons/phone.png";
 import car1 from "../../../Assets/Images/pic1.jpg";
 import car2 from "../../../Assets/Images/pic2.jpg";
@@ -13,12 +12,11 @@ const Footer = () => {
   const fullYear = date.getFullYear();
   return (
     <footer className="footer-container pt-4 mt-5">
-      <Container>
+      <Container className="pt-5">
         <Row>
           <Col md={3}>
             <div>
               <div className="footer-header">
-                <img src={carLogo} alt="carImg" />
                 <h3>
                   Car<span className="color-one">Rev</span>
                 </h3>
