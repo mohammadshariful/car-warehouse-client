@@ -29,3 +29,6 @@ code {
     font-size: 100%;
   }
 }
+.error {
+  color: #e21717;
+}
