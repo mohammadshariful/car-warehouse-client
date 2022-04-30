@@ -14,7 +14,7 @@ const PopularCar = () => {
         ))}
       </Row>
       <button className="d-block mx-auto update-btn">
-        Manage Inventory <FaAngleRight />{" "}
+        Manage Inventory <FaAngleRight />
       </button>
     </Container>
   );

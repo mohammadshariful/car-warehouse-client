@@ -10,9 +10,16 @@
   border-radius: 50%;
 }
 .user-info h5 {
-  font-weight: 300;
+  font-weight: 400;
   margin: 0 10px;
   font-size: 17px;
+}
+.star-container {
+  display: flex;
+  align-items: center;
+}
+.star-container p {
+  margin: 0;
 }
 
 .review-helpful {

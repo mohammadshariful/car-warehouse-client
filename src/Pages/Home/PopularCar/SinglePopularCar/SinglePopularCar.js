@@ -13,7 +13,7 @@ const SinglePopularCar = () => {
           </div>
         </div>
         <div className="single-popular-car-info">
-          <h4>Name</h4>
+          <h5>Brand Name : </h5>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
             doloribus delectus eligendi pariatur ducimus rerum laborum nobis sit

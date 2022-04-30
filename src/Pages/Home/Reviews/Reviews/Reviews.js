@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, ProgressBar, Row } from "react-bootstrap";
-import { FaStar, FaStarHalf } from "react-icons/fa";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import SingleReview from "../SingleReview/SingleReview";
 import "./Reviews.css";
 const Reviews = () => {
@@ -16,7 +16,7 @@ const Reviews = () => {
           <FaStar className="star" />
           <FaStar className="star" />
           <FaStar className="star" />
-          <FaStarHalf className="star" />
+          <FaStarHalfAlt className="star" />
         </p>
         <small>9,6,93,354</small>
       </div>

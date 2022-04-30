@@ -9,7 +9,7 @@
 
 @media only screen and (max-width: 576px) {
   .swiper-content img {
-    width: 200%;
+    width: 100%;
   }
 }
 
