@@ -1,0 +1,16 @@
+.line {
+  display: block;
+  width: 100px;
+  height: 2px;
+  background-color: #ff2f9b;
+  margin: 0 10px;
+}
+.social-login {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: 0;
+  display: block;
+  margin: 0 10px;
+  color: #ff2f9b;
+}

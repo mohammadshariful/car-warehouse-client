@@ -13,6 +13,16 @@ const SingleReview = () => {
         <FaStar className="star" />
         <FaStar className="star" />
         <FaStar className="star" />
+        <FaStar className="star" />
+      </p>
+    );
+  } else {
+    star = (
+      <p>
+        <FaStar className="star" />
+        <FaStar className="star" />
+        <FaStar className="star" />
+        <FaStar className="star" />
         <FaStarHalfAlt className="star" />
       </p>
     );
