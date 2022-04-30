@@ -37,7 +37,7 @@ const SingleReview = () => {
           </div>
           <div className="review-description-container">
             <div className="star-container">
-              <p>{star}</p>
+              <span>{star}</span>
               <span className="mx-2 text-muted">10/4/2022</span>
             </div>
             <p>

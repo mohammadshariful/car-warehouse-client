@@ -2,6 +2,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from "./Pages/Home/Home/Home";
 import LogIn from "./Pages/LogIn/LogIn";
 import NotFound from "./Pages/NotFound/NotFound";
@@ -22,6 +24,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 }
