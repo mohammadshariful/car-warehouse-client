@@ -1,8 +1,8 @@
 .submit-area {
-  height: 700px;
   background-color: #fff;
   position: relative;
   overflow: hidden;
+  padding-bottom: 150px;
   border-radius: 8px;
 }
 .singup-img-container {

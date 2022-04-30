@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import LogInImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
 import useStateHandle from "../../Hooks/useStateHandle";
+import Loading from "../Shared/Loading/Loading";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import "./LogIn.css";
 const LogIn = () => {
@@ -26,6 +27,10 @@ const LogIn = () => {
       navigate(from, { replace: true });
     }
   }, [user, from, navigate]);
+
+  if (sending) {
+    return <Loading />;
+  }
 
   const loginHandle = async (event) => {
     event.preventDefault();
@@ -51,7 +56,7 @@ const LogIn = () => {
 
   return (
     <Container className=" d-flex justify-content-center  my-5">
-      <div className="login-area w-75  mx-auto">
+      <div className="submit-area w-75  mx-auto">
         <div className="singup-img-container">
           <img src={LogInImg} alt="" />
         </div>

@@ -26,9 +26,13 @@ const Header = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto d-flex align-items-center">
             <CustomLink to="/">Home</CustomLink>
-            <CustomLink to="/additem">Add Item</CustomLink>
-            <CustomLink to="/myitem">My items</CustomLink>
-            <CustomLink to="/manageitem">Manage Items</CustomLink>
+            {user && (
+              <>
+                <CustomLink to="/additem">Add Item</CustomLink>
+                <CustomLink to="/myitem">My items</CustomLink>
+                <CustomLink to="/manageitem">Manage Items</CustomLink>
+              </>
+            )}
             {user ? (
               <CustomLink to="/login" onClick={() => signOut(auth)}>
                 LogOut
