@@ -19,7 +19,7 @@
   width: 100%;
   bottom: 0;
   height: 0%;
-  background-color: #ff2f9a65;
+  background-color: #6b49bb60;
   transition: 0.4s linear;
 }
 
@@ -33,7 +33,7 @@
   width: 100%;
   border: 0;
   padding: 8px 0;
-  color: #ff2f9b;
+  color: #6024eb;
   text-transform: uppercase;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -52,16 +52,16 @@
   font-weight: 400;
 }
 .update-btn {
-  border: 1px solid #ff2f9b;
-  background-color: #ff2f9b;
+  border: 1px solid #6024eb;
   color: #fff;
+  background-color: #6024eb;
   padding: 6px 12px;
   border-radius: 4px;
   transition: 0.3s linear;
 }
 .update-btn:hover {
-  color: #ff2f9b;
-  background-color: transparent;
+  color: #6024eb;
+  background-color: #fff;
 }
 
 @media only screen and (max-width: 576px) {

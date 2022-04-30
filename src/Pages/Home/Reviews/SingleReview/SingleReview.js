@@ -28,7 +28,7 @@ const SingleReview = () => {
     );
   }
   return (
-    <Col md={4} data-aos="fade-up">
+    <Col lg={4} md={6} data-aos="fade-up">
       <Card className="mb-3">
         <Card.Body className="h-100">
           <div className="user-info">

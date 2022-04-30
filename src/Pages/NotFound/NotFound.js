@@ -1,8 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import notFoundImg from "../../Assets/Images/notfound.gif";
 import "./NotFound.css";
 const NotFound = () => {
+  const navigate = useNavigate();
   return (
     <Container className="notFound-container w-75">
       <div>
@@ -17,7 +19,11 @@ const NotFound = () => {
               <span className="link-color"> Contact Support</span>
             </small>
           </p>
-          <button type="button" className="go-home-btn">
+          <button
+            onClick={() => navigate("/")}
+            type="button"
+            className="go-home-btn"
+          >
             Go Home
           </button>
         </div>

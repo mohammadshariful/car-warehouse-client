@@ -37,21 +37,22 @@ ul li {
   border: 0;
   outline: 0;
   width: 100%;
-  color: #f8f8f8de;
-  background-color: #30323381;
+  background-color: #fff;
+  color: #000;
   padding: 8px 20px;
   margin-bottom: 10px;
 }
 .newsletter-container button {
   display: block;
   width: 100%;
-  border: 1px solid #e2171752;
+  border: 1px solid #ff2f9b;
   background-color: #ff2f9b;
   padding: 12px 0;
   color: #fff;
   transition: 0.3s linear;
 }
 .newsletter-container button:hover {
+  border: 1px solid #fff;
   background-color: transparent;
 }
 .coyright {

@@ -4,7 +4,7 @@ import img1 from "../../../../Assets/Images/pic2.jpg";
 import "./SinglePopularCar.css";
 const SinglePopularCar = () => {
   return (
-    <Col md={4}>
+    <Col lg={4} md={6}>
       <div className="single-popular-car-container">
         <div className="single-popular-car">
           <img className="img-fluid" src={img1} alt="" />

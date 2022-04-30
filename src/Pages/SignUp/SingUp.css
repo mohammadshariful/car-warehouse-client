@@ -33,13 +33,13 @@
   display: block;
   margin: 10px auto;
   padding: 6px 12px;
-  border: 1px solid #ff2f9b;
-  background-color: #ff2f9b;
+  border: 1px solid #6024eb;
+  background-color: #6024eb;
   border-radius: 4px;
   transition: 0.3s ease-in;
 }
 .submit-btn:hover {
-  background-color: #cc0069e7;
+  background-color: #4515b4d0;
 }
 
 @media only screen and (max-width: 576px) {

@@ -4,7 +4,7 @@ import img from "../../../../Assets/Images/pic1.jpg";
 import "./SingleUpcomingCar.css";
 const SingleUpcomingCar = () => {
   return (
-    <Col md={4} className="mb-4" data-aos="fade-up">
+    <Col lg={4} md={6} className="mb-4" data-aos="fade-up">
       <div className="upcomingCar-container">
         <div className="upcomingCar-img-conainer">
           <img src={img} alt="" />

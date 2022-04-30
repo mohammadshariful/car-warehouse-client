@@ -14,11 +14,11 @@ code {
     monospace;
 }
 .section-title {
-  color: #ff2f9b;
+  color: #6024eb;
 }
 .section-title::after {
   content: "";
-  background-color: #ff2f9b;
+  background-color: #6024eb;
   display: block;
   width: 180px;
   height: 2px;

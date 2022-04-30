@@ -28,7 +28,7 @@ const SocialLogin = () => {
   }
 
   return (
-    <div>
+    <>
       <p className="d-flex justify-content-center align-items-center">
         <span className="line"></span>
         <span>or</span>
@@ -49,7 +49,7 @@ const SocialLogin = () => {
           <span>Facebook</span>
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

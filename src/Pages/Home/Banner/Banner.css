@@ -33,16 +33,16 @@
 }
 .explore-btn {
   display: block;
-  border: 1px solid #ff2f9b;
+  border: 1px solid #f0f8ff;
   color: #f0f8ff;
-  background-color: #ff2f9b;
+  background-color: transparent;
   padding: 8px 12px;
   border-radius: 4px;
   transition: 0.3s ease-in-out;
 }
 .explore-btn:hover {
-  border: 1px solid #f0f8ff;
-  background-color: transparent;
+  border: 1px solid #5050ee;
+  background-color: #ff2f9b;
 }
 .explore-btn:hover .explore-btn-icon {
   transform: translate(10px);

@@ -40,7 +40,7 @@ const SingUp = () => {
 
   return (
     <Container className=" d-flex justify-content-center  my-5">
-      <div className="submit-area w-75  mx-auto">
+      <div className="submit-area w-100 mx-auto">
         <div className="singup-img-container">
           <img src={singupImg} alt="" />
         </div>

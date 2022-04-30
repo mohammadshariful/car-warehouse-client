@@ -24,23 +24,23 @@ const Reviews = () => {
         <ul>
           <li>
             <span className="fw-bold">5</span>
-            <ProgressBar variant="success" now={60} />
+            <ProgressBar variant="primary" now={60} />
           </li>
           <li>
             <span className="fw-bold">4</span>
-            <ProgressBar variant="success" now={25} />
+            <ProgressBar variant="primary" now={25} />
           </li>
           <li>
             <span className="fw-bold">3</span>
-            <ProgressBar variant="success" now={20} />
+            <ProgressBar variant="primary" now={20} />
           </li>
           <li>
             <span className="fw-bold">2</span>
-            <ProgressBar variant="success" now={5} />
+            <ProgressBar variant="primary" now={5} />
           </li>
           <li>
             <span className="fw-bold">1</span>
-            <ProgressBar variant="success" now={10} />
+            <ProgressBar variant="primary" now={10} />
           </li>
         </ul>
       </div>
