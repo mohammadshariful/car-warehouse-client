@@ -6,7 +6,7 @@ import "./Banner.css";
 const Banner = () => {
   return (
     <div className="banner-container">
-      <div className="banner-info">
+      <div data-aos="fade-right" className="banner-info">
         <TypeAnimation
           cursor={true}
           sequence={["Lets geeting a new car.", 2000, ""]}
@@ -22,7 +22,7 @@ const Banner = () => {
           <FaAngleRight className="explore-btn-icon" />
         </button>
       </div>
-      <div className="banner-img">
+      <div data-aos="fade-left" className="banner-img">
         <img src={bannerImg} alt="" />
       </div>
     </div>

@@ -6,7 +6,7 @@ import "./PopularCar.css";
 const PopularCar = () => {
   const array = [1, 2, 3, 4, 5, 6];
   return (
-    <Container className="mt-5">
+    <Container className="mt-5" data-aos="fade-up">
       <h2 className="section-title text-center">Popular Car</h2>
       <Row>
         {array.map((arr) => (
