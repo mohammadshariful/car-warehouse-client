@@ -1,8 +1,12 @@
 import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSendPasswordResetEmail,
+  useSignInWithEmailAndPassword,
+} from "react-firebase-hooks/auth";
 import { FaUser } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import LogInImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
 import useStateHandle from "../../Hooks/useStateHandle";
@@ -11,6 +15,7 @@ import "./LogIn.css";
 const LogIn = () => {
   const [signInWithEmailAndPassword, user, , error] =
     useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
   const { email, password, handleEmail, handlePassword } = useStateHandle();
   const navigate = useNavigate();
   const location = useLocation();
@@ -22,12 +27,28 @@ const LogIn = () => {
     }
   }, [user, from, navigate]);
 
-  const loginHandle = (event) => {
+  const loginHandle = async (event) => {
     event.preventDefault();
     const emailValue = email.value;
     const passwordValue = password.value;
-    signInWithEmailAndPassword(emailValue, passwordValue);
+    await signInWithEmailAndPassword(emailValue, passwordValue);
   };
+
+  const handlePasswordReset = async () => {
+    const emailValue = email.value;
+
+    if (emailValue) {
+      await sendPasswordResetEmail(emailValue);
+      toast.success("Email Sent", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    } else {
+      toast.error("Enter Your Email", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+  };
+
   return (
     <Container className=" d-flex justify-content-center  my-5">
       <div className="login-area w-75  mx-auto">
@@ -65,7 +86,9 @@ const LogIn = () => {
               LogIn
             </button>
           </Form>
-          <p className="forget-password">Forget Your Password?</p>
+          <p className="forget-password" onClick={handlePasswordReset}>
+            Forget Your Password?
+          </p>
           <p className="text-center">
             You have no account? <Link to="/signup">SignUp</Link>
           </p>
