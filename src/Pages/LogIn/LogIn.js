@@ -1,11 +1,33 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LogInImg from "../../Assets/Images/linear.jpg";
+import auth from "../../Firebase/Firebase.init";
+import useStateHandle from "../../Hooks/useStateHandle";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import "./LogIn.css";
 const LogIn = () => {
+  const [signInWithEmailAndPassword, user, , error] =
+    useSignInWithEmailAndPassword(auth);
+  const { email, password, handleEmail, handlePassword } = useStateHandle();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
+
+  useEffect(() => {
+    if (user) {
+      navigate(from, { replace: true });
+    }
+  }, [user, from, navigate]);
+
+  const loginHandle = (event) => {
+    event.preventDefault();
+    const emailValue = email.value;
+    const passwordValue = password.value;
+    signInWithEmailAndPassword(emailValue, passwordValue);
+  };
   return (
     <Container className=" d-flex justify-content-center  my-5">
       <div className="login-area w-75  mx-auto">
@@ -17,15 +39,28 @@ const LogIn = () => {
             <FaUser className="user-icon" />
           </div>
           <h2 className="section-title text-center">LogIn</h2>
-          <Form className="w-75 mx-auto">
+          <Form onSubmit={loginHandle} className="w-75 mx-auto">
             <Form.Group className="mb-2" controlId="email">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control
+                onBlur={handleEmail}
+                type="email"
+                placeholder="Enter email"
+                required
+              />
             </Form.Group>
+            {email?.error && <p className="error">{email.error}</p>}
             <Form.Group className="mb-2" controlId="password">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Enter password" />
+              <Form.Control
+                onBlur={handlePassword}
+                type="password"
+                placeholder="Enter password"
+                required
+              />
             </Form.Group>
+            {password?.error && <p className="error">{password.error}</p>}
+            {error && <p className="error">{error.message}</p>}
             <button className="submit-btn" type="submit">
               LogIn
             </button>

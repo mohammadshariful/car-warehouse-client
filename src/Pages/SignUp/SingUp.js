@@ -2,13 +2,14 @@ import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaUser } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import singupImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
 import useStateHandle from "../../Hooks/useStateHandle";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import "./SingUp.css";
 const SingUp = () => {
+  const navigate = useNavigate();
   const {
     email,
     password,
@@ -23,9 +24,9 @@ const SingUp = () => {
 
   useEffect(() => {
     if (user) {
-      console.log("toiri hoice");
+      navigate("/");
     }
-  }, [user]);
+  }, [user, navigate]);
 
   const submitHandle = (event) => {
     event.preventDefault();
@@ -36,10 +37,6 @@ const SingUp = () => {
       createUserWithEmailAndPassword(emailValue, passwordValue);
     }
   };
-
-  if (error) {
-    console.log(error);
-  }
 
   return (
     <Container className=" d-flex justify-content-center  my-5">
@@ -94,6 +91,7 @@ const SingUp = () => {
             {confirmPassword?.error && (
               <p className="error">{confirmPassword.error}</p>
             )}
+            {error && <p className="error">{error.message}</p>}
             <button className="submit-btn" type="submit">
               SignUp
             </button>
