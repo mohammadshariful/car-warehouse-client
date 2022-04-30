@@ -1,0 +1,13 @@
+.login-area {
+  height: 600px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.forget-password {
+  width: 90%;
+  text-align: end;
+  cursor: pointer;
+  color: #6024eb;
+}
