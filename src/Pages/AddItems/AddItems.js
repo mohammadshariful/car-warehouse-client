@@ -21,10 +21,11 @@ const AddItems = () => {
     console.log(productInfo);
   };
   return (
-    <Container className="my-5 position-relative">
+    <Container className="my-5 position-relative" data-aos="fade-right">
       <div className="add-items-container">
         <h2 className="text-center section-title">Add Your Items</h2>
-        <Form onSubmit={handleItem} className="mt-5">
+        <p className="text-center">You can add your items like wish.</p>
+        <Form onSubmit={handleItem}>
           <Form.Group className="mb-3" controlId="imgUrl">
             <Form.Label>Picture URL</Form.Label>
             <Form.Control

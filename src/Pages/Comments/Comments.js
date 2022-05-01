@@ -10,7 +10,7 @@ const Comments = () => {
     event.target.reset();
   };
   return (
-    <div className="commnets-container">
+    <div className="commnets-container" data-aos="fade-left">
       <h5 className="text-center">Write your comments</h5>
       <hr />
       <div>

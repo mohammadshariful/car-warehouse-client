@@ -8,6 +8,7 @@ import AddItems from "./Pages/AddItems/AddItems";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home/Home";
 import LogIn from "./Pages/LogIn/LogIn";
+import MyItems from "./Pages/MyItems/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/additem" element={<AddItems />} />
+        <Route path="/myitem" element={<MyItems />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SingUp />} />
         <Route path="/blogs" element={<Blogs />} />

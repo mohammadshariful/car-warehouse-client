@@ -7,8 +7,8 @@ import "./Blogs.css";
 const Blogs = () => {
   return (
     <Container className="my-5 d-flex flex-column flex-md-row">
-      <div className="blogs-container">
-        <article className="blog">
+      <div className="blogs-container" data-aos="fade-right">
+        <article className="blog" data-aos="fade-up">
           <div className="blog-img">
             <img className="img-fluid" src={author} alt="" />
           </div>
@@ -42,7 +42,7 @@ const Blogs = () => {
             </div>
           </div>
         </article>
-        <article className="blog">
+        <article className="blog" data-aos="fade-up">
           <div className="blog-img">
             <img className="img-fluid" src={author} alt="" />
           </div>
@@ -76,7 +76,7 @@ const Blogs = () => {
             </div>
           </div>
         </article>
-        <article className="blog">
+        <article className="blog" data-aos="fade-up">
           <div className="blog-img">
             <img className="img-fluid" src={author} alt="" />
           </div>
@@ -110,7 +110,7 @@ const Blogs = () => {
             </div>
           </div>
         </article>
-        <article className="blog">
+        <article className="blog" data-aos="fade-up">
           <div className="blog-img">
             <img className="img-fluid" src={author} alt="" />
           </div>

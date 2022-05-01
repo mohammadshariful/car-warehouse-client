@@ -55,7 +55,10 @@ const LogIn = () => {
   };
 
   return (
-    <Container className=" d-flex justify-content-center  my-5">
+    <Container
+      className=" d-flex justify-content-center my-5"
+      data-aos="fade-up"
+    >
       <div className="submit-area w-100  mx-auto">
         <div className="singup-img-container">
           <img src={LogInImg} alt="" />

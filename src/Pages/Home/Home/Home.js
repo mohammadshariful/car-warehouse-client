@@ -8,7 +8,7 @@ import UpcomingCar from "../UpcomingCar/UpcomingCar/UpcomingCar";
 import "./Home.css";
 const Home = () => {
   return (
-    <div>
+    <div data-aos="fade-up">
       <TitleChange title="Home" />
       <Banner />
       <Sponsers />
