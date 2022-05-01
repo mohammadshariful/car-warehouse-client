@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AddItems from "./Pages/AddItems/AddItems";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home/Home";
 import LogIn from "./Pages/LogIn/LogIn";
@@ -20,6 +21,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/additem" element={<AddItems />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SingUp />} />
         <Route path="/blogs" element={<Blogs />} />

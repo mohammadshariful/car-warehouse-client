@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, ProgressBar, Row } from "react-bootstrap";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import CreateReview from "../CreateReview/CreateReview";
 import SingleReview from "../SingleReview/SingleReview";
 import "./Reviews.css";
 const Reviews = () => {
@@ -49,6 +50,7 @@ const Reviews = () => {
           <SingleReview />
         ))}
       </Row>
+      <CreateReview />
     </Container>
   );
 };
