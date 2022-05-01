@@ -1,8 +1,10 @@
 import React from "react";
 import { Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import "./SinglePopularCar.css";
 const SinglePopularCar = ({ car }) => {
-  const { brand, picture, description, price, quantity, supplier } = car;
+  const navigate = useNavigate();
+  const { id, brand, picture, description, price, quantity, supplier } = car;
   return (
     <Col lg={4} md={6}>
       <div className="single-popular-car-container">
@@ -26,8 +28,12 @@ const SinglePopularCar = ({ car }) => {
           </p>
           <h6>Service Provider : {supplier}</h6>
           <div className="text-end ">
-            <button type="button" className="update-btn">
-              Update Car
+            <button
+              onClick={() => navigate(`/stockupdate/${id}`)}
+              type="button"
+              className="update-btn"
+            >
+              Stock Update
             </button>
           </div>
         </div>

@@ -12,7 +12,9 @@ import MyItems from "./Pages/MyItems/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
+import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth";
 import SingUp from "./Pages/SignUp/SingUp";
+import StockUpdate from "./Pages/StockUpdate/StockUpdate";
 function App() {
   useEffect(() => {
     AOS.init();
@@ -22,8 +24,30 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/additem" element={<AddItems />} />
-        <Route path="/myitem" element={<MyItems />} />
+        <Route
+          path="/additem"
+          element={
+            <RequireAuth>
+              <AddItems />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/myitem"
+          element={
+            <RequireAuth>
+              <MyItems />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/stockupdate/:stockId"
+          element={
+            <RequireAuth>
+              <StockUpdate />
+            </RequireAuth>
+          }
+        />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SingUp />} />
         <Route path="/blogs" element={<Blogs />} />
