@@ -22,10 +22,11 @@ const Footer = () => {
                 </h3>
               </div>
               <p>
-                Buying a car is a huge decision and may come with a lot of
-                pressure. It is very crucial that you're armed with the proper
-                information about the vehicle you are interested in, the value
-                of your trade in if you have one and the budget you can afford.
+                Car dealers order their inventory based on their reading of the
+                marketplace, how well certain models have sold in the past, on
+                feedback from consumers and of course what the OEM (Original
+                Equipment Manufacturer) wants them to order and keep in their
+                inventory.
               </p>
               <div>
                 <p className="footer-contact">

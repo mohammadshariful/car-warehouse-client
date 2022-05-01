@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "brand": "Jeep Meridian",
+    "picture": "https://i.ibb.co/mb0FYNY/Jeep-Meridian.jpg",
+    "date": "Jun 15,2022"
+  },
+  {
+    "id": "2",
+    "brand": "Toyota Belta",
+    "picture": "https://i.ibb.co/pRgrmqq/Toyota-Belta.jpg",
+    "date": "Jul 18,2022"
+  },
+  {
+    "id": "3",
+    "brand": "Audi A8 L",
+    "picture": "https://i.ibb.co/L5VGdTF/Audi-A8-L.jpg",
+    "date": "Jul 15, 2022"
+  }
+]

@@ -10,6 +10,8 @@
 }
 .upcomingCar-img-conainer img {
   width: 100%;
+  height: 200px;
+  object-fit: cover;
   transition: 0.3s ease-in-out;
 }
 .upcomingCar-img-conainer:hover img {
@@ -39,5 +41,8 @@
 @media only screen and (max-width: 576px) {
   .upcomingCar-info h4 {
     font-size: 100%;
+  }
+  .upcomingCar-img-conainer img {
+    height: 100%;
   }
 }
