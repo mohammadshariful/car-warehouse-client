@@ -4,7 +4,7 @@ import "./Loading.css";
 const Loading = () => {
   return (
     <Container className="loading-container">
-      <div class="lds-spinner">
+      <div className="lds-spinner">
         <div></div>
         <div></div>
         <div></div>
