@@ -19,7 +19,7 @@ const PopularCar = () => {
           <h2 className="section-title text-center">Popular Car</h2>
           <Row>
             {sliceCar.map((car) => (
-              <SinglePopularCar key={car.id} car={car} />
+              <SinglePopularCar key={car._id} car={car} />
             ))}
           </Row>
           <button

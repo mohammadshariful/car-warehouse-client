@@ -10,15 +10,15 @@ const StockUpdate = () => {
   const { stockId } = useParams();
   const navigate = useNavigate();
   useEffect(() => {
-    fetch("/cars.json")
+    fetch("http://localhost:5000/popularCars")
       .then((res) => res.json())
       .then((data) => {
-        const singleCar = data.find((car) => car.id == stockId);
+        const singleCar = data.find((car) => car._id === stockId);
         setCar(singleCar);
       });
   }, [stockId, addQuantity]);
 
-  const { id, brand, description, picture, price, quantity, supplier } = car;
+  const { _id, brand, description, picture, price, quantity, supplier } = car;
 
   //add quantity
   const handleQuantity = (event) => {

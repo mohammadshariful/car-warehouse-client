@@ -1,24 +1,41 @@
+import axios from "axios";
 import React from "react";
 import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { toast } from "react-toastify";
+import auth from "../../Firebase/Firebase.init";
 import "./AddItems.css";
 const AddItems = () => {
-  const handleItem = (event) => {
+  const [user] = useAuthState(auth);
+  const handleItem = async (event) => {
     event.preventDefault();
+    const email = user.email;
     const pictureUrl = event.target.url.value;
     const brand = event.target.brand.value;
     const description = event.target.description.value;
     const price = event.target.price.value;
     const quantity = event.target.quantity.value;
     const providerName = event.target.providerName.value;
-    const productInfo = {
+    const carInfo = {
       pictureUrl,
       brand,
       description,
       price,
       quantity,
       providerName,
+      email,
     };
-    console.log(productInfo);
+
+    const { data } = await axios.post(
+      "http://localhost:5000/popularCars",
+      carInfo
+    );
+    if (data.acknowledged) {
+      toast.success("Added a new item", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      event.target.reset();
+    }
   };
   return (
     <Container className="my-5 position-relative" data-aos="fade-right">

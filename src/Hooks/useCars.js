@@ -6,7 +6,7 @@ const useCars = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("cars.json")
+    fetch("http://localhost:5000/popularCars")
       .then((res) => res.json())
       .then((data) => {
         setCars(data);

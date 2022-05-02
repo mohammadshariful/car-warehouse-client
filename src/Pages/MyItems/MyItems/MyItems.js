@@ -1,9 +1,10 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
+import useItems from "../../../Hooks/useItems";
 import SingleItem from "../SingleItem/SingleItem";
 import "./MyItems.css";
 const MyItems = () => {
-  const array = [1, 2, 3];
+  const { cars } = useItems();
   return (
     <Container className="my-5 " data-aos="fade-left">
       <div className="items-container">
@@ -11,10 +12,10 @@ const MyItems = () => {
         <p className="text-center">
           Here's the element you made just allows you to see.
         </p>
-        <h6 className="text-center">Total add your item({array.length})</h6>
+        <h6 className="text-center">Total add your item({cars.length})</h6>
         <Row className="mt-3">
-          {array.map((arr) => (
-            <SingleItem />
+          {cars.map((car) => (
+            <SingleItem key={car._id} car={car} />
           ))}
         </Row>
       </div>

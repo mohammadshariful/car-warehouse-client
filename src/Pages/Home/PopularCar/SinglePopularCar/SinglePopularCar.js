@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./SinglePopularCar.css";
 const SinglePopularCar = ({ car }) => {
   const navigate = useNavigate();
-  const { id, brand, picture, description, price, quantity, supplier } = car;
+  const { _id, brand, picture, description, price, quantity, supplier } = car;
   return (
     <Col lg={4} md={6}>
       <div className="single-popular-car-container">
@@ -29,7 +29,7 @@ const SinglePopularCar = ({ car }) => {
           <h6>Service Provider : {supplier}</h6>
           <div className="text-end ">
             <button
-              onClick={() => navigate(`/stockupdate/${id}`)}
+              onClick={() => navigate(`/stockupdate/${_id}`)}
               type="button"
               className="update-btn"
             >
