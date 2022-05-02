@@ -8,6 +8,7 @@ import AddItems from "./Pages/AddItems/AddItems";
 import Blogs from "./Pages/Blogs/Blogs";
 import Home from "./Pages/Home/Home/Home";
 import LogIn from "./Pages/LogIn/LogIn";
+import ManageInventoris from "./Pages/ManageInventoris/ManageInventoris/ManageInventoris";
 import MyItems from "./Pages/MyItems/MyItems/MyItems";
 import NotFound from "./Pages/NotFound/NotFound";
 import Footer from "./Pages/Shared/Footer/Footer";
@@ -45,6 +46,14 @@ function App() {
           element={
             <RequireAuth>
               <StockUpdate />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/manageitems"
+          element={
+            <RequireAuth>
+              <ManageInventoris />
             </RequireAuth>
           }
         />
