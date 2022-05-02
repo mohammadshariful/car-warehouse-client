@@ -1,0 +1,17 @@
+.cars-gallary {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.link {
+  background-color: #6024eb;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 5px;
+}

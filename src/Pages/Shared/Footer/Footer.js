@@ -75,7 +75,7 @@ const Footer = () => {
           </Col>
           <Col md={3}>
             <div>
-              <h3>Recent Pots</h3>
+              <h3>Recent Posts</h3>
               <div className="recent-posts-container">
                 <div className="post-one">
                   <img src="" alt="" />

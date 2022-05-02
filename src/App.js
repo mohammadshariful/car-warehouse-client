@@ -6,6 +6,11 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddItems from "./Pages/AddItems/AddItems";
 import Blogs from "./Pages/Blogs/Blogs";
+import AllCars from "./Pages/CarGallary/AllCars/AllCars";
+import CarGallary from "./Pages/CarGallary/CarGallary/CarGallary";
+import Exterior from "./Pages/CarGallary/Exterior/Exterior";
+import Interior from "./Pages/CarGallary/Interior/Interior";
+import RoadTest from "./Pages/CarGallary/RoadTest/RoadTest";
 import Home from "./Pages/Home/Home/Home";
 import LogIn from "./Pages/LogIn/LogIn";
 import ManageInventoris from "./Pages/ManageInventoris/ManageInventoris/ManageInventoris";
@@ -59,6 +64,13 @@ function App() {
         />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SingUp />} />
+        <Route path="/carsgallary" element={<CarGallary />}>
+          <Route index element={<AllCars />} />
+          <Route path="allcars" element={<AllCars />} />
+          <Route path="interior" element={<Interior />} />
+          <Route path="exterior" element={<Exterior />} />
+          <Route path="roadtest" element={<RoadTest />} />
+        </Route>
         <Route path="/blogs" element={<Blogs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

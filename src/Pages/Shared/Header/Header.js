@@ -41,6 +41,7 @@ const Header = () => {
               <CustomLink to="/login">LogIn</CustomLink>
             )}
             <CustomLink to="/signup">SignUp</CustomLink>
+            <CustomLink to="/carsgallary">Cars Gallary</CustomLink>
             <CustomLink to="/blogs">Blogs</CustomLink>
           </Nav>
         </Navbar.Collapse>
