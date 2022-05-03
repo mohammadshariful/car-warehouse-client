@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import addIcon from "../../../Assets/Icons/icons8-add-30.png";
 import Inventory from "../Inventory/Inventory";
 import "./ManageInventoris.css";
+
 const ManageInventoris = () => {
-  const [cars, setCars] = useState([]);
   const navigate = useNavigate();
+  const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("/cars.json")
+    fetch("http://localhost:5000/popularCars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);
@@ -35,7 +36,12 @@ const ManageInventoris = () => {
           </thead>
           <tbody>
             {cars.map((car) => (
-              <Inventory key={car.id} car={car} />
+              <Inventory
+                key={car._id}
+                cars={cars}
+                setCars={setCars}
+                car={car}
+              />
             ))}
           </tbody>
         </Table>

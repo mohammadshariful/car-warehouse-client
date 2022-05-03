@@ -16,6 +16,12 @@
     margin-left: 0;
   }
 }
+.user {
+  background-color: #80808042;
+  padding: 6px;
+  font-size: 25px;
+  border-radius: 50%;
+}
 @media only screen and (min-width: 576px) and (max-width: 992px) {
   .commnets-container {
     width: 100%;

@@ -1,8 +1,19 @@
+import axios from "axios";
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import "./Inventory.css";
-const Inventory = ({ car }) => {
-  const { picture, brand, quantity, price } = car;
+const Inventory = ({ cars, setCars, car }) => {
+  const { _id, picture, brand, quantity, price } = car;
+  const handleDelete = async (id) => {
+    const url = `http://localhost:5000/popularCars/${id}`;
+    const processed = window.confirm("Are You sure want to delete ?");
+    if (processed) {
+      await axios.delete(url);
+      const remainig = cars.filter((car) => car._id !== id);
+      setCars(remainig);
+    }
+  };
+
   return (
     <tr className="inventory-container" data-aos="fade-right">
       <td>
@@ -12,7 +23,7 @@ const Inventory = ({ car }) => {
       <td>${price}</td>
       <td>{quantity}</td>
       <td>
-        <div className="delete-inventory">
+        <div onClick={() => handleDelete(_id)} className="delete-inventory">
           <FaTrashAlt />
           <button>Delete</button>
         </div>

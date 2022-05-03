@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 const useCars = () => {
   const [cars, setCars] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-
   useEffect(() => {
     setIsLoading(true);
     fetch("http://localhost:5000/popularCars")
