@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Row } from "react-bootstrap";
+import useDataLoad from "../../../Hooks/useDataLoad";
+import Loading from "../../Shared/Loading/Loading";
 import Car from "../Car/Car";
 const Exterior = () => {
-  const [carsGallary, setCarsGallary] = useState([]);
-  useEffect(() => {
-    fetch("/AllCars.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setCarsGallary(data);
-      });
-  }, []);
+  const url =
+    "https://enigmatic-earth-44216.herokuapp.com/carGallary?catagory=road-test";
 
-  const roadTestCar = carsGallary.filter((car) =>
-    car.catagory.includes("road-test")
-  );
+  const { data, loading } = useDataLoad(url);
 
   return (
-    <Row>
-      {roadTestCar.map((car) => (
-        <Car key={car.id} car={car} />
-      ))}
-    </Row>
+    <>
+      {loading ? (
+        <Loading />
+      ) : (
+        <Row>
+          {data.map((car) => (
+            <Car key={car.id} car={car} />
+          ))}
+        </Row>
+      )}
+    </>
   );
 };
 
