@@ -17,8 +17,8 @@ const useDataLoad = (url) => {
         setIsLoading(false);
         console.dir(error.message);
       });
-  }, [update, url]);
-  return { loadData, setUpdate, setLoadData, isLoading };
+  }, [url, update]);
+  return { loadData, update, setUpdate, setLoadData, isLoading };
 };
 
 export default useDataLoad;

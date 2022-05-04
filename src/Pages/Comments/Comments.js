@@ -5,7 +5,7 @@ import { FaTrashAlt, FaUser } from "react-icons/fa";
 import useDataLoad from "../../Hooks/useDataLoad";
 import "./Comments.css";
 const Comments = () => {
-  const url = `http://localhost:5000/comment`;
+  const url = `https://enigmatic-earth-44216.herokuapp.com/comment`;
   const { loadData, setLoadData, setUpdate } = useDataLoad(url);
 
   const handleComment = async (event) => {
@@ -14,13 +14,13 @@ const Comments = () => {
     const text = event.target.comment.value;
     const comment = { userName, text };
     //
-    const url = `http://localhost:5000/comment`;
+    const url = `https://enigmatic-earth-44216.herokuapp.com/comment`;
     const { data } = await axios.post(url, comment);
     event.target.reset();
   };
 
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/comment/${id}`;
+    const url = `https://enigmatic-earth-44216.herokuapp.com/comment/${id}`;
     const confirm = window.confirm("Are you sure want to delete?");
     if (confirm) {
       const { data } = await axios.delete(url);

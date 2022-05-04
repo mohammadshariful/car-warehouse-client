@@ -9,7 +9,7 @@ const ManageInventoris = () => {
   const navigate = useNavigate();
   const [cars, setCars] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/popularCars")
+    fetch("https://enigmatic-earth-44216.herokuapp.com/popularCars")
       .then((res) => res.json())
       .then((data) => setCars(data));
   }, []);

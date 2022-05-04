@@ -5,7 +5,7 @@ import "./Inventory.css";
 const Inventory = ({ cars, setCars, car }) => {
   const { _id, picture, brand, quantity, price } = car;
   const handleDelete = async (id) => {
-    const url = `http://localhost:5000/popularCars/${id}`;
+    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${id}`;
     const processed = window.confirm("Are You sure want to delete ?");
     if (processed) {
       await axios.delete(url);

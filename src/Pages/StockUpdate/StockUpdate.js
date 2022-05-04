@@ -1,35 +1,32 @@
-import React, { useEffect, useState } from "react";
+import axios from "axios";
+import React from "react";
 import { Container, Form } from "react-bootstrap";
 import { FaAngleRight } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
+import useUpdate from "../../Hooks/useUpdate";
 import "./StockUpdate.css";
 const StockUpdate = () => {
-  const [car, setCar] = useState({});
-  const [deliverd, setDeliverd] = useState(0);
-  const [addQuantity, setAddQuantity] = useState(0);
   const { stockId } = useParams();
   const navigate = useNavigate();
-  useEffect(() => {
-    fetch("http://localhost:5000/popularCars")
-      .then((res) => res.json())
-      .then((data) => {
-        const singleCar = data.find((car) => car._id === stockId);
-        setCar(singleCar);
-      });
-  }, [stockId, addQuantity]);
-
-  const { _id, brand, description, picture, price, quantity, supplier } = car;
-
+  const { car, isLoad, setIsLoad } = useUpdate(stockId);
+  let { picture, brand, description, supplier, quantity, price } = car;
+  //handle Quantity
+  const handleQuantity = async () => {
+    const newQuantity = quantity - 1;
+    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
+    await axios.put(url, { newQuantity });
+    setIsLoad(!isLoad);
+  };
   //add quantity
-  const handleQuantity = (event) => {
+  const hadleFormQuantity = async (event) => {
     event.preventDefault();
-    const quantity = parseInt(event.target.quantity.value);
-    setAddQuantity(quantity);
+    const textQuantity = parseInt(event.target.quantity.value);
+    const newQuantity = quantity + textQuantity;
+    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
+    await axios.put(url, { newQuantity });
+    setIsLoad(!isLoad);
     event.target.reset();
   };
-
-  const parseQuantity = parseInt(quantity);
-  const setQuantity = addQuantity + parseQuantity - deliverd;
 
   return (
     <Container className="my-5 stock-update-container">
@@ -43,20 +40,16 @@ const StockUpdate = () => {
           <p>
             Price : <span className="fw-bold"> ${price}</span>
           </p>
-          <p>Quantity :{setQuantity}</p>
+          <p>Quantity :{quantity}</p>
           <h6>Service Provider : {supplier}</h6>
           <div className="d-flex justify-content-between align-items-center flex-column flex-md flex-md-row">
-            <button
-              onClick={() => setDeliverd(deliverd + 1)}
-              className="update-btn mb-2"
-            >
+            <button onClick={handleQuantity} className="update-btn mb-2">
               Delivered
             </button>
-            <Form onSubmit={handleQuantity}>
+            <Form onSubmit={hadleFormQuantity}>
               <Form.Group className="mb-2" controlId="quantity">
-                <Form.Label>Amount Quantity</Form.Label>
                 <Form.Control
-                  type="text"
+                  type="number"
                   name="quantity"
                   placeholder="Enter Quantity"
                   required

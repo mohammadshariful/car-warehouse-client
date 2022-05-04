@@ -5,7 +5,7 @@ const useCars = () => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
     setIsLoading(true);
-    fetch("http://localhost:5000/popularCars")
+    fetch("https://enigmatic-earth-44216.herokuapp.com/popularCars")
       .then((res) => res.json())
       .then((data) => {
         setCars(data);

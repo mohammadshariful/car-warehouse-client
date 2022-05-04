@@ -8,7 +8,7 @@ const useItems = () => {
   const email = user.email;
   useEffect(() => {
     const getCars = async () => {
-      const url = `http://localhost:5000/getCars?email=${email}`;
+      const url = `https://enigmatic-earth-44216.herokuapp.com/getCars?email=${email}`;
       const { data } = await axios.get(url);
       setCars(data);
     };
