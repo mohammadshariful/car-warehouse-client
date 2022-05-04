@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-
 const useUpdate = (stockId) => {
   const [car, setCar] = useState({});
   const [isLoad, setIsLoad] = useState(false);

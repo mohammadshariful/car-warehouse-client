@@ -1,34 +1,38 @@
 import axios from "axios";
 import React from "react";
 import { FloatingLabel, Form } from "react-bootstrap";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { FaTrashAlt, FaUser } from "react-icons/fa";
+import auth from "../../Firebase/Firebase.init";
 import useDataLoad from "../../Hooks/useDataLoad";
 import "./Comments.css";
 const Comments = () => {
+  const [user] = useAuthState(auth);
   const url = `https://enigmatic-earth-44216.herokuapp.com/comment`;
-  const { loadData, setLoadData, setUpdate } = useDataLoad(url);
+
+  const { data, setData, setUpdate, update } = useDataLoad(url);
 
   const handleComment = async (event) => {
     event.preventDefault();
-    const userName = event.target.userName.value;
+    const userName = user.displayName;
     const text = event.target.comment.value;
     const comment = { userName, text };
     //
     const url = `https://enigmatic-earth-44216.herokuapp.com/comment`;
-    const { data } = await axios.post(url, comment);
+    await axios.post(url, comment);
+    setUpdate(!update);
     event.target.reset();
   };
 
   const handleDelete = async (id) => {
-    const url = `https://enigmatic-earth-44216.herokuapp.com/comment/${id}`;
-    const confirm = window.confirm("Are you sure want to delete?");
-    if (confirm) {
-      const { data } = await axios.delete(url);
-      if (data.acknowledged) {
-        const remaining = loadData.filter((comment) => comment._id !== id);
-        setLoadData(remaining);
-        setUpdate(true);
-      }
+    const processed = window.confirm("Are you sure want to delete?");
+    if (processed) {
+      const url = `https://enigmatic-earth-44216.herokuapp.com/comment/${id}`;
+      await axios.delete(url);
+
+      const remaining = data.filter((comment) => comment._id !== id);
+      setData(remaining);
+      setUpdate(!update);
     }
   };
 
@@ -38,7 +42,7 @@ const Comments = () => {
       <hr />
       <div>
         <ul>
-          {loadData.map((comment) => (
+          {data.map((comment) => (
             <>
               <li
                 key={comment?._id}
@@ -53,7 +57,7 @@ const Comments = () => {
                 </div>
                 <div>
                   <button
-                    onClick={() => handleDelete(comment._id)}
+                    onClick={() => handleDelete(comment?._id)}
                     className="delete-btn"
                   >
                     <FaTrashAlt />
@@ -66,14 +70,6 @@ const Comments = () => {
       </div>
 
       <Form onSubmit={handleComment}>
-        <Form.Group className="mb-2" controlId="name">
-          <Form.Control
-            name="userName"
-            type="text"
-            placeholder="User Name"
-            required
-          />
-        </Form.Group>
         <FloatingLabel
           controlId="floatingTextarea"
           label="comment here ..."

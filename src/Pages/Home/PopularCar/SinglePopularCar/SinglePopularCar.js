@@ -2,7 +2,7 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import "./SinglePopularCar.css";
-const SinglePopularCar = ({ car }) => {
+const SinglePopularCar = ({ car, loading }) => {
   const navigate = useNavigate();
   const { _id, brand, picture, description, price, quantity, supplier } = car;
   return (

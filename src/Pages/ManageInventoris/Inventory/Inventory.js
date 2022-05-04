@@ -2,18 +2,19 @@ import axios from "axios";
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import "./Inventory.css";
-const Inventory = ({ cars, setCars, car }) => {
-  const { _id, picture, brand, quantity, price } = car;
+const Inventory = ({ car, update, setUpdate, data, setData }) => {
+  const { _id, brand, picture, price, quantity } = car;
   const handleDelete = async (id) => {
-    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${id}`;
-    const processed = window.confirm("Are You sure want to delete ?");
+    const processed = window.confirm("Are you sure want to delete?");
+
     if (processed) {
+      const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${id}`;
       await axios.delete(url);
-      const remainig = cars.filter((car) => car._id !== id);
-      setCars(remainig);
+      const remaing = data.filter((car) => car._id !== id);
+      setData(remaing);
+      setUpdate(!update);
     }
   };
-
   return (
     <tr className="inventory-container" data-aos="fade-right">
       <td>

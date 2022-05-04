@@ -1,24 +1,24 @@
 import { useEffect, useState } from "react";
 
 const useDataLoad = (url) => {
-  const [loadData, setLoadData] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const [update, setUpdate] = useState(false);
-
   useEffect(() => {
-    setIsLoading(true);
+    setLoading(true);
     fetch(url)
-      .then((response) => response.json())
+      .then((res) => res.json())
       .then((result) => {
-        setLoadData(result);
-        setIsLoading(false);
+        setData(result);
+        setLoading(false);
       })
       .catch((error) => {
-        setIsLoading(false);
-        console.dir(error.message);
+        setLoading(false);
+        console.log(error);
       });
   }, [url, update]);
-  return { loadData, update, setUpdate, setLoadData, isLoading };
+
+  return { data, setData, loading, update, setUpdate };
 };
 
 export default useDataLoad;
