@@ -1,10 +1,29 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
-import useItems from "../../../Hooks/useItems";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/Firebase.init";
 import SingleItem from "../SingleItem/SingleItem";
 import "./MyItems.css";
 const MyItems = () => {
-  const { cars } = useItems();
+  const [user] = useAuthState(auth);
+  const [cars, setCars] = useState([]);
+  const [isTrue, setIsTrue] = useState(false);
+
+  useEffect(() => {
+    const getItems = async () => {
+      const email = user.email;
+      const url = `http://localhost:5000/getCars?email=${email}`;
+      const { data } = await axios.get(url, {
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      });
+      setCars(data);
+    };
+    getItems();
+  }, [isTrue]);
+
   return (
     <Container className="my-5 " data-aos="fade-left">
       <div className="items-container">
@@ -15,7 +34,14 @@ const MyItems = () => {
         <h6 className="text-center">Total add your item({cars.length})</h6>
         <Row className="mt-3">
           {cars.map((car) => (
-            <SingleItem key={car._id} car={car} />
+            <SingleItem
+              key={car._id}
+              car={car}
+              cars={cars}
+              setCars={setCars}
+              isTrue={isTrue}
+              setIsTrue={setIsTrue}
+            />
           ))}
         </Row>
       </div>

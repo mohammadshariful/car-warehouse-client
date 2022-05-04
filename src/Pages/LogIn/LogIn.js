@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
 import {
@@ -37,6 +38,10 @@ const LogIn = () => {
     const emailValue = email.value;
     const passwordValue = password.value;
     await signInWithEmailAndPassword(emailValue, passwordValue);
+    const { data } = await axios.post("http://localhost:5000/login", {
+      emailValue,
+    });
+    localStorage.setItem("accessToken", data.accessToken);
   };
 
   const handlePasswordReset = async () => {

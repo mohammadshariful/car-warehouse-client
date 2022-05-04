@@ -2,10 +2,8 @@ import axios from "axios";
 import React from "react";
 import { Col } from "react-bootstrap";
 import { FaTrashAlt } from "react-icons/fa";
-import useItems from "../../../Hooks/useItems";
 import "./SingleItem.css";
-const SingleItem = ({ car }) => {
-  const { cars, setCars } = useItems();
+const SingleItem = ({ car, cars, setCars, isTrue, setIstrue }) => {
   const { _id, pictureUrl, brand } = car;
   const handleDelete = async (id) => {
     const url = `https://enigmatic-earth-44216.herokuapp.com/getCars/${id}`;
@@ -15,6 +13,7 @@ const SingleItem = ({ car }) => {
       if (data.deletedCount > 0) {
         const remaing = cars.filter((car) => car._id !== id);
         setCars(remaing);
+        setIstrue(!isTrue);
       }
     }
   };
