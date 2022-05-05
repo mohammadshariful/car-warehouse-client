@@ -11,7 +11,12 @@ const SinglePopularCar = ({ car, loading }) => {
         <div className="single-popular-car">
           <img className="img-fluid" src={picture} alt="" />
           <div className="wraper">
-            <button className="wraper-see-detils">See Details</button>
+            <button
+              onClick={() => navigate(`/stockupdate/${_id}`)}
+              className="wraper-see-detils"
+            >
+              See Details
+            </button>
           </div>
         </div>
         <div className="single-popular-car-info">

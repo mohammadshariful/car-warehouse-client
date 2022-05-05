@@ -1,7 +1,9 @@
 import axios from "axios";
+import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { Container, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
 import SingleItem from "../SingleItem/SingleItem";
 import "./MyItems.css";
@@ -9,17 +11,25 @@ const MyItems = () => {
   const [user] = useAuthState(auth);
   const [cars, setCars] = useState([]);
   const [isTrue, setIsTrue] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getItems = async () => {
       const email = user.email;
       const url = `http://localhost:5000/getCars?email=${email}`;
-      const { data } = await axios.get(url, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
-      setCars(data);
+      try {
+        const { data } = await axios.get(url, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        });
+        setCars(data);
+      } catch (error) {
+        if (error.response.status === 401 || error.response.status === 403) {
+          signOut(auth);
+          navigate("/login");
+        }
+      }
     };
     getItems();
   }, [isTrue]);
