@@ -12,6 +12,7 @@ import Exterior from "./Pages/CarGallary/Exterior/Exterior";
 import Interior from "./Pages/CarGallary/Interior/Interior";
 import RoadTest from "./Pages/CarGallary/RoadTest/RoadTest";
 import Home from "./Pages/Home/Home/Home";
+import AllReviews from "./Pages/Home/Reviews/AllReviews/AllReviews";
 import LogIn from "./Pages/LogIn/LogIn";
 import ManageInventoris from "./Pages/ManageInventoris/ManageInventoris/ManageInventoris";
 import MyItems from "./Pages/MyItems/MyItems/MyItems";
@@ -62,6 +63,7 @@ function App() {
             </RequireAuth>
           }
         />
+        <Route path="/allreviews" element={<AllReviews />} />
         <Route path="/login" element={<LogIn />} />
         <Route path="/signup" element={<SingUp />} />
         <Route path="/carsgallary" element={<CarGallary />}>

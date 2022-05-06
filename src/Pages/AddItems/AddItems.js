@@ -4,6 +4,7 @@ import { Col, Container, FloatingLabel, Form, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../Firebase/Firebase.init";
+import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./AddItems.css";
 const AddItems = () => {
   const [user] = useAuthState(auth);
@@ -39,6 +40,7 @@ const AddItems = () => {
   };
   return (
     <Container className="my-5 position-relative" data-aos="fade-right">
+      <TitleChange title="Add Item" />
       <div className="add-items-container">
         <h2 className="text-center section-title">Add Your Items</h2>
         <p className="text-center">You can add your items like wish.</p>

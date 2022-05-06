@@ -13,6 +13,7 @@ import auth from "../../Firebase/Firebase.init";
 import useStateHandle from "../../Hooks/useStateHandle";
 import Loading from "../Shared/Loading/Loading";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./LogIn.css";
 const LogIn = () => {
   const [signInWithEmailAndPassword, user, , error] =
@@ -38,9 +39,12 @@ const LogIn = () => {
     const emailValue = email.value;
     const passwordValue = password.value;
     await signInWithEmailAndPassword(emailValue, passwordValue);
-    const { data } = await axios.post("http://localhost:5000/login", {
-      emailValue,
-    });
+    const { data } = await axios.post(
+      " https://enigmatic-earth-44216.herokuapp.com/login",
+      {
+        emailValue,
+      }
+    );
     localStorage.setItem("accessToken", data.accessToken);
   };
 
@@ -64,6 +68,7 @@ const LogIn = () => {
       className=" d-flex justify-content-center my-5"
       data-aos="fade-up"
     >
+      <TitleChange title="Login" />
       <div className="submit-area w-100  mx-auto">
         <div className="singup-img-container">
           <img src={LogInImg} alt="" />

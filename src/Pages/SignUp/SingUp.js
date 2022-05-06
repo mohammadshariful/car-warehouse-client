@@ -3,10 +3,12 @@ import { Container, Form } from "react-bootstrap";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import singupImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
 import useStateHandle from "../../Hooks/useStateHandle";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
+import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./SingUp.css";
 const SingUp = () => {
   const navigate = useNavigate();
@@ -25,6 +27,9 @@ const SingUp = () => {
   useEffect(() => {
     if (user) {
       navigate("/");
+      toast.success("user signup successfull", {
+        position: toast.POSITION.TOP_CENTER,
+      });
     }
   }, [user, navigate]);
 
@@ -43,6 +48,7 @@ const SingUp = () => {
       className=" d-flex justify-content-center my-5"
       data-aos="fade-up"
     >
+      <TitleChange title="Signup" />
       <div className="submit-area w-100 mx-auto">
         <div className="singup-img-container">
           <img src={singupImg} alt="" />

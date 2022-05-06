@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import userImg from "../../../../Assets/Images/pic3.jpg";
+import userImg from "../../../../Assets/Images/userImgPlaceholder.png";
 import "./SingleReview.css";
-const SingleReview = () => {
-  const ratings = 5;
-  let star;
-  if (ratings) {
-    star = (
+const SingleReview = ({ review }) => {
+  const { name, star, description, date } = review;
+  let getStar;
+  if (star) {
+    getStar = (
       <p>
         <FaStar className="star" />
         <FaStar className="star" />
@@ -17,7 +17,7 @@ const SingleReview = () => {
       </p>
     );
   } else {
-    star = (
+    getStar = (
       <p>
         <FaStar className="star" />
         <FaStar className="star" />
@@ -28,24 +28,19 @@ const SingleReview = () => {
     );
   }
   return (
-    <Col lg={4} md={6} data-aos="fade-up">
-      <Card className="mb-3">
-        <Card.Body className="h-100">
+    <Col lg={4} md={6} className="mb-3" data-aos="fade-up">
+      <Card className="mb-3 h-100">
+        <Card.Body>
           <div className="user-info">
             <img src={userImg} alt="" />
-            <h5>Yahya Arrassi</h5>
+            <h5>{name ? name : "unknown"}</h5>
           </div>
           <div className="review-description-container">
             <div className="star-container">
-              <span>{star}</span>
-              <span className="mx-2 text-muted">10/4/2022</span>
+              <span>{getStar}</span>
+              <span className="mx-2 text-muted">{date}</span>
             </div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              necessitatibus cupiditate, laboriosam nisi facere, facilis, quia
-              iure numquam fuga unde rerum iusto fugit saepe nihil ullam
-              corporis ipsa fugiat earum.
-            </p>
+            <p>{description}</p>
           </div>
           <div className="review-helpful">
             <span>Was this review helpful?</span>

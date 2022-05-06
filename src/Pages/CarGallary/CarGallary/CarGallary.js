@@ -2,10 +2,12 @@ import React from "react";
 import { Container } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 import CustomLink from "../../CustomLink/CustomLink";
+import TitleChange from "../../Shared/TitleChangle/TitleChange";
 import "./CarGallary.css";
 const CarGallary = () => {
   return (
     <Container className="my-5">
+      <TitleChange title="Car Gallary" />
       <div className="cars-gallary">
         <h2 className="text-center section-title">Cars Gallary</h2>
         <div className="link-container">

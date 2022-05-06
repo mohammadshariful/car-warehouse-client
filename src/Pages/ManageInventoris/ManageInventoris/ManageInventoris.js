@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import addIcon from "../../../Assets/Icons/icons8-add-30.png";
 import useDataLoad from "../../../Hooks/useDataLoad";
 import Loading from "../../Shared/Loading/Loading";
+import TitleChange from "../../Shared/TitleChangle/TitleChange";
 import Inventory from "../Inventory/Inventory";
 import "./ManageInventoris.css";
 const ManageInventoris = () => {
@@ -17,6 +18,7 @@ const ManageInventoris = () => {
         <Loading />
       ) : (
         <Container className="my-5 ">
+          <TitleChange title="Manage Items" />
           <div className="inventory-management">
             <h2 className="text-center section-title">
               Manage all your inventories
