@@ -1,0 +1,14 @@
+.search-container-bg {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../../Assets//Images/find-img-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.search-container-bg-overly {
+  width: 85%;
+  margin: 0 auto;
+  padding: 40px 0;
+}

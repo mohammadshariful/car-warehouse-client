@@ -8,7 +8,7 @@ import CreateReview from "../CreateReview/CreateReview";
 import SingleReview from "../SingleReview/SingleReview";
 import "./Reviews.css";
 const Reviews = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const url = " https://enigmatic-earth-44216.herokuapp.com/reviews";
   const { data, loading, update, setUpdate } = useDataLoad(url);
   const sliceReviews = data.slice(0, 3);
@@ -61,7 +61,12 @@ const Reviews = () => {
             ))}
           </Row>
           <div className="text-end">
-            <button onClick={()=>navigate("/allreviews")}  className="update-btn">See all Reviews</button>
+            <button
+              onClick={() => navigate("/allreviews")}
+              className="update-btn mb-3"
+            >
+              See all Reviews
+            </button>
           </div>
           <CreateReview update={update} setUpdate={setUpdate} />
         </Container>

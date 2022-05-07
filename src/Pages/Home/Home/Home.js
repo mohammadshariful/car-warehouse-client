@@ -3,6 +3,7 @@ import TitleChange from "../../Shared/TitleChangle/TitleChange";
 import Banner from "../Banner/Banner";
 import PopularCar from "../PopularCar/PopularCar/PopularCar";
 import Reviews from "../Reviews/Reviews/Reviews";
+import SearchCar from "../SearchCar/SearchCar";
 import Sponsers from "../Sponsers/Sponsers";
 import UpcomingCar from "../UpcomingCar/UpcomingCar/UpcomingCar";
 import "./Home.css";
@@ -15,6 +16,7 @@ const Home = () => {
       <PopularCar />
       <UpcomingCar />
       <Reviews />
+      <SearchCar />
     </div>
   );
 };

@@ -29,7 +29,7 @@ const CreateReview = ({ update, setUpdate }) => {
   return (
     <>
       <Button
-        variant="primary"
+        style={{ backgroundColor: "#6024EB" }}
         className="d-block mx-auto"
         onClick={handleShow}
       >
@@ -71,6 +71,7 @@ const CreateReview = ({ update, setUpdate }) => {
             </FloatingLabel>
             <button
               type="submit"
+              style={{ backgroundColor: "#6024EB" }}
               className="btn btn-primary d-block mx-auto w-50"
             >
               Submit
