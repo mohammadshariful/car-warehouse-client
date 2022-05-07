@@ -9,21 +9,23 @@ const StockUpdate = () => {
   const { stockId } = useParams();
   const navigate = useNavigate();
   const { car, isLoad, setIsLoad } = useUpdate(stockId);
-  let { picture, brand, description, supplier, quantity, price } = car;
+  let { picture, brand, description, supplier, quantity, price, sold } = car;
   //handle Quantity
   const handleQuantity = async () => {
     const newQuantity = quantity - 1;
+    const newSold = sold + 1;
     const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
-    await axios.put(url, { newQuantity });
+    await axios.put(url, { newQuantity, newSold });
     setIsLoad(!isLoad);
   };
   //add quantity
   const hadleFormQuantity = async (event) => {
     event.preventDefault();
+    const newSold = sold;
     const textQuantity = parseInt(event.target.quantity.value);
     const newQuantity = quantity + textQuantity;
     const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
-    await axios.put(url, { newQuantity });
+    await axios.put(url, { newQuantity, newSold });
     setIsLoad(!isLoad);
     event.target.reset();
   };
@@ -40,10 +42,20 @@ const StockUpdate = () => {
           <p>
             Price : <span className="fw-bold"> ${price}</span>
           </p>
-          <p>Quantity :{quantity}</p>
+          {quantity <= 0 ? (
+            <p className="out-of-stock">Out of stock</p>
+          ) : (
+            <p>Quantity :{quantity}</p>
+          )}
+          {quantity === 0 && <p>Quantity :{quantity}</p>}
+          <p>Sold : {sold}</p>
           <h6>Service Provider : {supplier}</h6>
           <div className="d-flex justify-content-between align-items-center flex-column flex-md flex-md-row">
-            <button onClick={handleQuantity} className="update-btn mb-2">
+            <button
+              disabled={quantity <= 0 ? true : false}
+              onClick={handleQuantity}
+              className="update-btn mb-2"
+            >
               Delivered
             </button>
             <Form onSubmit={hadleFormQuantity}>

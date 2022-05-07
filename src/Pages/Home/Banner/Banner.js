@@ -11,14 +11,11 @@ const Banner = () => {
       <div data-aos="fade-right" className="banner-info">
         <TypeAnimation
           cursor={true}
-          sequence={["Lets geeting a new car.", 2000, ""]}
+          sequence={["Find Cars Special for you", 3000, ""]}
           wrapper="h1"
           repeat={Infinity}
         />
-        <p>
-          Your dream is here.Choose your favourite car and buy it.we have
-          provided our best services.
-        </p>
+        <p>With thousands of cars,we have just the right one for you.</p>
         <button onClick={() => navigate("/login")} className="explore-btn">
           <span> Explore Now</span>
           <FaAngleRight className="explore-btn-icon" />

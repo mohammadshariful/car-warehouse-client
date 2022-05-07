@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import "./SinglePopularCar.css";
 const SinglePopularCar = ({ car, loading }) => {
   const navigate = useNavigate();
-  const { _id, brand, picture, description, price, quantity, supplier } = car;
+  const { _id, brand, picture, description, price, quantity, sold, supplier } =
+    car;
   return (
     <Col lg={4} md={6}>
       <div className="single-popular-car-container">
@@ -28,9 +29,8 @@ const SinglePopularCar = ({ car, loading }) => {
           <p>
             Price : <span className="fw-bold"> ${price}</span>
           </p>
-          <p>
-            <small>Quantity : {quantity}</small>
-          </p>
+          <p>Quantity : {quantity}</p>
+          <p>Sold: {sold}</p>
           <h6>Service Provider : {supplier}</h6>
           <div className="text-end ">
             <button

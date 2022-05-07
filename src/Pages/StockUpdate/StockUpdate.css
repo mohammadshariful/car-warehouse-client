@@ -21,7 +21,11 @@
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
+.out-of-stock {
+  color: #e21717;
+  font-size: 20px;
+  font-weight: 500;
+}
 @media only screen and (max-width: 576px) {
   .stock-img-container {
     width: 100%;

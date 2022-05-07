@@ -4,7 +4,7 @@ import { Col } from "react-bootstrap";
 import { FaTrashAlt } from "react-icons/fa";
 import "./SingleItem.css";
 const SingleItem = ({ car, cars, setCars, isTrue, setIstrue }) => {
-  const { _id, pictureUrl, brand } = car;
+  const { _id, picture, brand } = car;
   const handleDelete = async (id) => {
     const url = `https://enigmatic-earth-44216.herokuapp.com/getCars/${id}`;
     const confirm = window.confirm("Are you sure want to delete item?");
@@ -22,7 +22,7 @@ const SingleItem = ({ car, cars, setCars, isTrue, setIstrue }) => {
     <Col lg={4} md={6} className="my-3" data-aos="fade-up">
       <div className="item-container">
         <div className="item-img-container">
-          <img src={pictureUrl} alt="" />
+          <img src={picture} alt="" />
         </div>
         <h5>{brand}</h5>
         <button onClick={() => handleDelete(_id)} className="delete-item">

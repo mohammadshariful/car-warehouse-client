@@ -11,14 +11,14 @@ const AddItems = () => {
   const handleItem = async (event) => {
     event.preventDefault();
     const email = user.email;
-    const pictureUrl = event.target.url.value;
+    const picture = event.target.url.value;
     const brand = event.target.brand.value;
     const description = event.target.description.value;
     const price = event.target.price.value;
     const quantity = event.target.quantity.value;
     const providerName = event.target.providerName.value;
     const carInfo = {
-      pictureUrl,
+      picture,
       brand,
       description,
       price,
