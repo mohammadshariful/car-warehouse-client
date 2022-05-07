@@ -33,6 +33,8 @@ const Header = () => {
                 <CustomLink to="/manageitems">Manage Items</CustomLink>
               </>
             )}
+            <CustomLink to="/carsgallary">Cars Gallary</CustomLink>
+            <CustomLink to="/blogs">Blogs</CustomLink>
             {user ? (
               <CustomLink to="/login" onClick={() => signOut(auth)}>
                 LogOut
@@ -41,8 +43,6 @@ const Header = () => {
               <CustomLink to="/login">LogIn</CustomLink>
             )}
             <CustomLink to="/signup">SignUp</CustomLink>
-            <CustomLink to="/carsgallary">Cars Gallary</CustomLink>
-            <CustomLink to="/blogs">Blogs</CustomLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

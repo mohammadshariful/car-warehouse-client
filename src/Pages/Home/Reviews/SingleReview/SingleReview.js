@@ -6,7 +6,7 @@ import "./SingleReview.css";
 const SingleReview = ({ review }) => {
   const { name, star, description, date } = review;
   let getStar;
-  if (star) {
+  if (star === 5) {
     getStar = (
       <p>
         <FaStar className="star" />
