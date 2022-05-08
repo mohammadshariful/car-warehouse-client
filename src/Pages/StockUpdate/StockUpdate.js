@@ -19,7 +19,7 @@ const StockUpdate = () => {
     setIsLoad(!isLoad);
   };
   //add quantity
-  const hadleFormQuantity = async (event) => {
+  const handleFormQuantity = async (event) => {
     event.preventDefault();
     const newSold = sold;
     const textQuantity = parseInt(event.target.quantity.value);
@@ -58,7 +58,7 @@ const StockUpdate = () => {
             >
               Delivered
             </button>
-            <Form onSubmit={hadleFormQuantity}>
+            <Form onSubmit={handleFormQuantity}>
               <Form.Group className="mb-2" controlId="quantity">
                 <Form.Control
                   type="number"

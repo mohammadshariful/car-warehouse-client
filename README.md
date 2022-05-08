@@ -13,6 +13,7 @@ Our aim is to sell more vehicles at cheaper prices rather than trying to ask top
 - Some routes are protected.If any one to see the routes ,his/her must be login or register
 - Here is a good features available.If you want , you will update product quantity.
 - Products Management features available.
+- If user want to review or commmnet to the blogs he/ his will can do it.
 
 ## List of Technology uses of projects
 
