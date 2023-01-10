@@ -1,0 +1,182 @@
+[
+  {
+    "picture": "https://i.ibb.co/TPzR7Nh/BMW-8-serie-2-door-coupe-grey.jpg",
+    "brand": "BMW 8-seris 2-door coupe grey",
+    "description": "As the brand's halo coupe, the BMW 8 Series Coupe has the tough job of convincing buyers that it's worth double the value of the 4 Series Coupe. More than this, the 8 Series needs to fend off serious competition in the US from the likes of the all-conquering Porsche 911 and luxurious alternatives such as the Lexus LC.",
+    "price": "62,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "James"
+  },
+  {
+    "picture": "https://i.ibb.co/rbSmfGp/Mercedes-Benz-AMG-GT-2-door-coupe-yellow.jpg",
+    "brand": "Mercedes-Benz AMZ GT 2-door coupe yellow",
+    "description": "The Mercedes-AMG GT combines the fascination of an authentic sports car with segment-specific technology leadership and superb everyday practicality. With a top speed of 312 km/h and an acceleration from 0 to 100 km/h in 3.8 seconds, the Mercedes-AMG GT is the ideal fit for a sporty lifestyle.",
+    "price": "14,600",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Robert"
+  },
+  {
+    "picture": "https://i.ibb.co/1Tz9y5L/Porsche-Macan-5-door-SUV-blue.jpg",
+    "brand": "Porsche Macan 5-door SUV blue",
+    "description": "Porsche AG, Stuttgart's new sports car in the SUV segment has been given the name Macan. The name Macan is derived from the Indonesian word for tiger and combines suppleness, power, fascination and dynamics core characteristics of the new off-road car",
+    "price": "14,900",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "John"
+  },
+  {
+    "picture": "https://i.ibb.co/L87f7Tz/Audi-A4-4-door-sedan-blue.jpg",
+    "brand": "Audi A4 4-door sedan blue",
+    "description": "The 2022 Audi A4 is a quintessential compact luxury sports sedan, with a richly appointed cabin, lively handling, upscale styling, and plenty of tech features. All models come with the brand's signature Quattro all-wheel-drive system, and buyers can choose between two turbocharged four-cylinder engines, the more powerful of which makes a stout 261 horsepower.",
+    "price": "23,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Michael"
+  },
+  {
+    "picture": "https://i.ibb.co/b2jVNbM/Chevrolet-Camaro-2-door-convertible-blue.jpg",
+    "brand": "Chevrolet Camaro 2-door convertible blue",
+    "description": "The Camaro is one of the popular Chevrolet vehicles in Nigeria. Like all other vehicles, prices of brand new Chevrolet Camaro are affected by fluctuation in the currency exchange rate, tariff, and custom clearance charges. Regardless, the latest model can be gotten for anything between N30, 000, 000 and N38, 000, 000.",
+    "price": "40,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "William"
+  },
+  {
+    "picture": "https://i.ibb.co/Bf7QhGp/Ferrari-La-Ferrari-2-door-coupe-red.jpg",
+    "brand": "Ferrari LaFerrai 2-door coupe red",
+    "description": "As with any high-end Ferrari, expect the LaFerrari successor to be unbelievably expensive and produced in extremely limited quantities. We would expect pricing to slot in at around $2 million, with production limited to just a few hundred units total.",
+    "price": "810,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "David"
+  },
+  {
+    "picture": "https://i.ibb.co/jkSq9LP/Bentley-Mulsanne-4-door-sedan-gold.jpg",
+    "brand": "Bentley Mulsanne 4-door sedan gold",
+    "description": "Bentley offers a number of packages that add significant upgrades to this already lavish vehicle and nearly limitless options for customization. One-off items such as a drink cabinet with a bottle cooler, extra vanity mirrors and power curtains are available. Special colors, veneers, embroidery and even jewelry boxes are at one's fingertips. Package highlights include",
+    "price": "74,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Richard"
+  },
+  {
+    "picture": "https://i.ibb.co/FVn46G0/Audi-e-tron-5-door-SUV-white.jpg",
+    "brand": "Ford Mustang Fastback 2-door coupe orange",
+    "description": "What is the difference between a Mustang Fastback and a Coupe? The fastback and coupe are body styles of the classic mustang manufactured by Ford. A fastback has an aerodynamic appearance with a sloping back window while the rear of the coupe has a vertical rear window and larger trunk lid.",
+    "price": "14,700",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Joseph"
+  },
+  {
+    "picture": "https://i.ibb.co/8rqyKhM/1-39-1024x683.jpg",
+    "brand": "Mercedes-Benz S-class 4-door sedan white",
+    "description": "The Mercedes-Benz S-Class is a four-door sedan with five seats, though a posh four-seat layout is available in Maybach models. The front seats are supple and highly supportive, regardless of configuration, and there's plenty of headroom and legroom for taller occupants. There's also a wide range of seat and steering wheel adjustments, making it easy to find a comfortable driving position.",
+    "price": "41,100",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Thomas"
+  },
+  {
+    "picture": "https://i.ibb.co/fvrHSqQ/BMW-8-serie-2-door-convertible-black.jpg",
+    "brand": "BMW 8-serie 2-door convertible black",
+    "description": "The cost of insuring a BMW 8-Series will depend on a variety of factors, including your deductible, the level of coverage that you want, and the type of insurance that you choose. Your age, gender, location, credit score, and driving record can also have an impact on your insurance rates. Check out our car insurance guide  to find the best policy for you.",
+    "price": "14,500",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Charles"
+  },
+  {
+    "picture": "https://i.ibb.co/6nsDfvc/Porsche-Cayenne-5-door-SUV-white.jpg",
+    "brand": "Bentley Mulsanne 4-door sedan blue",
+    "description": "The Mulsanne is beyond the combination of luxury with power. Its fearsome acceleration is felt not as a sudden blast forward, but as a smooth surge of seemingly limitless power. The character of the V8 engine note, barely perceptible from inside the cabin while the car is cruising, builds to a rich, powerful roar on acceleration when the throttle is opened wide. The Mulsanne benefits from a re-engineered V8 engine, providing extra range and improvements in efficiency of up to 13%.",
+    "price": "14,900",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Christopher"
+  },
+  {
+    "picture": "https://i.ibb.co/HYSZz5P/Ferrari-Portofino-2-door-convertible-red.jpg",
+    "brand": "Cadillac Escalade 5-door Suv Brown",
+    "description": "The Escalade will go on sale in late 2020. Trim levels will include Luxury, Premium Luxury, Platinum Luxury, Sport, and Platinum Sport, and the diesel will only be available on the Luxury and Platinum Luxury models. Cadillac is mum on price but expect the base ask to stay roughly the same as the outgoing model's, so about $77,000. Buyers who choose to outfit their cars with Super Cruise—Cadillac's hands-free driving system—or any of the Escalade's luxury interior fittings will pay a lot more.",
+    "price": "14,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Matthew"
+  },
+  {
+    "picture": "https://i.ibb.co/3rfDKyq/Ford-Mustang-Fastback-2-door-coupe-red.jpg",
+    "brand": "Ford Mustang Fastback 2-door coupe red",
+    "description": "Ford started production on the Mustang fastback at the beginning of 1965. Carroll Shelby designed a modified version of the fastback, called the GT-350, and it was these that were produced in San Jose. They first appeared on January 27, 1965.",
+    "price": "41,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Donald"
+  },
+  {
+    "picture": "https://i.ibb.co/LtKq4sH/Porsche-718-Cayman.jpg",
+    "brand": "Porsche 718 Cayman",
+    "description": "There's a slick infotainment system (which is as modern as they come) and slightly different air vents, but other than that it's business as usual. That means the seats are supportive, the driving position excellent and the suspension impressively comfortable",
+    "price": "50,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Andrew"
+  },
+  {
+    "picture": "https://i.ibb.co/0r7Kwmt/Ferrari-F12-Berlinetta-2-door-coupe-red.jpg",
+    "brand": "Ferrari Portofino 2-door convertible red",
+    "description": "Capable of unleashing a massive 600 cv and sprinting from 0 to 200 km/h in just 10.8 seconds, the Ferrari Portofino is the most powerful convertible to combine the advantages of a retractable hard top, a roomy boot and generous cockpit space complete with two rear seats suitable for short trips.",
+    "price": "90,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "George"
+  },
+  {
+    "picture": "https://i.ibb.co/7WZ7vpK/Mercedes-Benz-GLE-5-door-SUV-silver.jpg",
+    "brand": "Mercedes-Benz GLE 5-door SUv silver",
+    "description": "Mercedes-Benz GLE is a 5 seater Luxury available in a price range of Rs. 85.80 Lakh - 1.25 Cr*. It is available in 4 variants, 3 engine options that are BS6 compliant and a single Automatic transmission",
+    "price": "159,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Edward"
+  },
+  {
+    "picture": "https://i.ibb.co/1mhrFj9/Audi-e-tron-5-door-SUV-blue.jpg",
+    "brand": "Audi e-tron 5-door SUV blue",
+    "description": "Consumer Reports gives the 2021 Audi e-Tron just a 1/5 for its predicted reliability. Although there are no reliability ratings for 2020, 2019 shows a poor reliability rating. Major problem spots in the 2019 include the drive system and power equipment.",
+    "price": "84,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Ronald"
+  },
+  {
+    "picture": "https://i.ibb.co/dD1ZDm6/Ford-Mustang-Fastback-2-door-coupe-orange.jpg",
+    "brand": "Ford Mustang Fastback 2-door coupe orange",
+    "description": "The 2021 Mustang GT Fastback is equipped with hood vents and a rear diffuser that adds racing-type flair. This sporty model also boasts a raised decklid spoiler with a blade construction for enhanced aerodynamics. LED sequential taillights emphasize the track-ready design of this iconic Ford muscle car",
+    "price": "17,700",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Jeffrey"
+  },
+  {
+    "picture": "https://i.ibb.co/Z6ZKh92/Porsche-718-Cayman-2-door-coupe-grey.jpg",
+    "brand": "Porsche 718 Cayman 2-door coupe grey",
+    "description": "The Porsche Boxster and Cayman are mid-engine two-seater sports cars manufactured and marketed by German automobile manufacturer Porsche across four generations — as a 2-door, 2-seater roadster (Boxster) and a 3-door, 2-seater fastback coupé (Cayman).",
+    "price": "51,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Ryan"
+  },
+  {
+    "picture": "https://i.ibb.co/4srk46H/Mercedes-Benz-S-class-2-door-coupe-silver.jpg",
+    "brand": "Mercedes-Benz S-class 2-door coupe silver",
+    "description": "In a lengthy press release detailing model updates for the 2021 model year, Mercedes has officially announced the S-Class Coupe and S-Class Convertible are entering their final year of production. Both the regular and AMG-tuned variants of the luxury vehicles will be discontinued after the 2021 model year",
+    "price": "116,000",
+    "quantity": 20,
+    "sold": 0,
+    "supplier": "Raymond"
+  }
+]

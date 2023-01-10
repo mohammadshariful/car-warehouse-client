@@ -1,0 +1,20 @@
+.swiper-content {
+  margin: 0 30px;
+  background-color: #fff;
+}
+.swiper-content img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 576px) {
+  .swiper-content img {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .swiper-content img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,36 @@
+.inventory-management {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.add-item-btn {
+  display: inline-block;
+  border: 1px solid #6024eb;
+  background-color: #6024eb;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin: 10px 0;
+  transition: 0.3s ease-in-out;
+}
+.add-item-btn button {
+  border: 0;
+  color: #fff;
+  background-color: transparent;
+}
+.add-item-btn:hover {
+  background-color: #fff;
+}
+.add-item-btn:hover button {
+  color: #6024eb;
+}
+
+@media only screen and (max-width: 576px) {
+  .add-item-btn {
+    padding: 4px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .add-item-btn {
+    padding: 4px 10px;
+  }
+}

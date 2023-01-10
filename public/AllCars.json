@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "picture": "https://i.ibb.co/s3V2qw7/pic22.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 2,
+    "picture": "https://i.ibb.co/xmrxBdx/pic19.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 3,
+    "picture": "https://i.ibb.co/zSbZ8tv/pic16.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 4,
+    "picture": "https://i.ibb.co/yq89V1N/pic13.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 5,
+    "picture": "https://i.ibb.co/ySGP6tP/pic10.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 6,
+    "picture": "https://i.ibb.co/x7d8Fkk/pic7.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 7,
+    "picture": "https://i.ibb.co/QCD1gWW/pic4.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 8,
+    "picture": "https://i.ibb.co/M8HnPWr/pic1.jpg",
+    "catagory": "interior"
+  },
+  {
+    "id": 9,
+    "picture": "https://i.ibb.co/s3V2qw7/pic22.jpg",
+    "catagory": "exterior"
+  },
+  {
+    "id": 10,
+    "picture": "https://i.ibb.co/cQvqDDX/pic25.jpg",
+    "catagory": "exterior"
+  },
+  {
+    "id": 11,
+    "picture": "https://i.ibb.co/X3hL1by/pic8.jpg",
+    "catagory": "exterior"
+  },
+  {
+    "id": 12,
+    "picture": "https://i.ibb.co/rtqNwMM/pic5.jpg",
+    "catagory": "exterior"
+  },
+  {
+    "id": 13,
+    "picture": "https://i.ibb.co/qpM1Pvt/pic2.jpg",
+    "catagory": "exterior"
+  },
+  {
+    "id": 14,
+    "picture": "https://i.ibb.co/nCTNn1s/pic3.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 15,
+    "picture": "https://i.ibb.co/r0nsWyr/pic6.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 16,
+    "picture": "https://i.ibb.co/X3hL1by/pic8.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 17,
+    "picture": "https://i.ibb.co/GtRbp96/pic12.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 18,
+    "picture": "https://i.ibb.co/yq89V1N/pic13.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 19,
+    "picture": "https://i.ibb.co/JdJ6vtp/pic21.jpg",
+    "catagory": "road-test"
+  },
+  {
+    "id": 20,
+    "picture": "https://i.ibb.co/QpcygbN/pic24.jpg",
+    "catagory": "road-test"
+  }
+]

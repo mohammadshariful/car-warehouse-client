@@ -1,0 +1,39 @@
+.notFound-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-top: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.notFound-info h2 {
+  color: #e21717;
+}
+.link-color {
+  color: #383cc1;
+  cursor: pointer;
+}
+.go-home-btn {
+  border: 1px solid #1faa59;
+  background-color: #1faa59;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+.go-home-btn:hover {
+  color: #1faa59;
+  background-color: transparent;
+}
+@media only screen and (max-width: 576px) {
+  .notFound-info h2 {
+    font-size: 100%;
+  }
+  .notFound-info p {
+    font-size: 80%;
+  }
+  .go-home-btn {
+    padding: 4px 12px;
+  }
+}

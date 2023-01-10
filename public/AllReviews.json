@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Mohammad Shariful",
+    "description": "Cadillac's flagship SUV is versatile enough to haul a large family around in the lap of luxury while having the capability to tow heavy load",
+    "star": 5,
+    "date": "2022/04/05"
+  },
+  {
+    "name": "Shimul Mujumder",
+    "description": "The Cadillac CT4-V Blackwing serves as a worthy performance halo for the CT4 model lineup",
+    "star": 4,
+    "date": "2022/04/05"
+  },
+  {
+    "name": "Shuvo",
+    "description": "With more advanced technology, a long list of truck-friendly features, and a thoroughly modern interior, the F 150 is a top pick in the class.",
+    "star": 5,
+    "date": "2022/06/05"
+  }
+]

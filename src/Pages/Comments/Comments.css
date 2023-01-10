@@ -1,0 +1,30 @@
+.commnets-container {
+  width: 30%;
+  background-color: #fff;
+  margin-left: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+.delete-btn {
+  border: 0;
+  color: #e21717;
+  border-radius: 4px;
+}
+@media only screen and (max-width: 576px) {
+  .commnets-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.user {
+  background-color: #80808042;
+  padding: 6px;
+  font-size: 25px;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 576px) and (max-width: 992px) {
+  .commnets-container {
+    width: 100%;
+    margin-left: 0;
+  }
+}

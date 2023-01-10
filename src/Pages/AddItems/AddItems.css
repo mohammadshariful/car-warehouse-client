@@ -1,0 +1,18 @@
+.add-items-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+.add-items-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 20%;
+  height: 20%;
+  background: linear-gradient(#2196f3, #e91e63);
+  clip-path: circle(20% at 10% 10%);
+}
+.add-item-form {
+  padding: 0 40px 40px 30px;
+}
