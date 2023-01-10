@@ -28,7 +28,7 @@ const AddItems = () => {
     };
 
     const { data } = await axios.post(
-      "https://enigmatic-earth-44216.herokuapp.com/popularCars",
+      "https://car-rev-server.onrender.com/popularCars",
       carInfo
     );
     if (data.acknowledged) {

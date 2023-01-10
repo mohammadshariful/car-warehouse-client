@@ -4,7 +4,7 @@ import useDataLoad from "../../../../Hooks/useDataLoad";
 import Loading from "../../../Shared/Loading/Loading";
 import SingleUpcomingCar from "../SingleUpcomingCar/SingleUpcomingCar";
 const UpcomingCar = () => {
-  const url = `https://enigmatic-earth-44216.herokuapp.com/upcommingCars`;
+  const url = `https://car-rev-server.onrender.com/upcommingCars`;
   const { data, loading } = useDataLoad(url);
   return (
     <>

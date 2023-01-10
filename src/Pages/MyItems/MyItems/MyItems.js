@@ -13,7 +13,7 @@ const MyItems = () => {
   useEffect(() => {
     const getItems = async () => {
       const email = user.email;
-      const url = `https://enigmatic-earth-44216.herokuapp.com/getCars?email=${email}`;
+      const url = `https://car-rev-server.onrender.com/getCars?email=${email}`;
       const { data } = await axios.get(url, {
         headers: {
           authorization: `Bearer ${localStorage.getItem("accessToken")}`,

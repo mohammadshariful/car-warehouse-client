@@ -5,7 +5,7 @@ import Loading from "../../../Shared/Loading/Loading";
 import SingleReview from "../SingleReview/SingleReview";
 
 const AllReviews = () => {
-  const url = " https://enigmatic-earth-44216.herokuapp.com/reviews";
+  const url = " https://car-rev-server.onrender.com/reviews";
   const { data, loading } = useDataLoad(url);
   return (
     <>

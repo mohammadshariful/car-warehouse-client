@@ -40,7 +40,7 @@ const LogIn = () => {
     const passwordValue = password.value;
     await signInWithEmailAndPassword(emailValue, passwordValue);
     const { data } = await axios.post(
-      " https://enigmatic-earth-44216.herokuapp.com/login",
+      " https://car-rev-server.onrender.com/login",
       {
         emailValue,
       }

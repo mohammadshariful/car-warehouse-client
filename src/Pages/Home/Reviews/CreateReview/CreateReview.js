@@ -18,7 +18,7 @@ const CreateReview = ({ update, setUpdate }) => {
     const star = parseInt(event.target.star.value);
     const description = event.target.description.value;
     const reviewInfo = { name, description, star, date };
-    const url = " https://enigmatic-earth-44216.herokuapp.com/reviews";
+    const url = " https://car-rev-server.onrender.com/reviews";
     await axios.post(url, reviewInfo);
     setUpdate(!update);
     toast.success("Review Added Successful", {

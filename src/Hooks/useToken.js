@@ -12,7 +12,7 @@ const useToken = () => {
       const email = user?.email;
       if (email) {
         const { data } = await axios.post(
-          " https://enigmatic-earth-44216.herokuapp.com/login",
+          "https://car-rev-server.onrender.com/login",
           {
             email,
           }

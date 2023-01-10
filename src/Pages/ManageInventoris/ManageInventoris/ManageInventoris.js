@@ -13,11 +13,11 @@ const ManageInventoris = () => {
   const [pageSize, setPageSize] = useState(10);
   const navigate = useNavigate();
 
-  const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars?page=${page}&&pageSize=${pageSize}`;
+  const url = `https://car-rev-server.onrender.com/popularCars?page=${page}&&pageSize=${pageSize}`;
   const { data, setData, loading, setUpdate, update } = useDataLoad(url);
 
   useEffect(() => {
-    fetch("https://enigmatic-earth-44216.herokuapp.com/popularCarsCount")
+    fetch("https://car-rev-server.onrender.com/popularCarsCount")
       .then((res) => res.json())
       .then((data) => {
         const count = data.count;
@@ -69,9 +69,8 @@ const ManageInventoris = () => {
                 {[...Array(pageCount).keys()].map((number, index) => (
                   <button
                     key={index}
-                    className={`btn mx-1 ${
-                      page === number ? "btn-primary" : "btn-outline-primary"
-                    }`}
+                    className={`btn mx-1 ${page === number ? "btn-primary" : "btn-outline-primary"
+                      }`}
                     onClick={() => setPage(number)}
                   >
                     {number + 1}

@@ -9,7 +9,7 @@ import SingleReview from "../SingleReview/SingleReview";
 import "./Reviews.css";
 const Reviews = () => {
   const navigate = useNavigate();
-  const url = " https://enigmatic-earth-44216.herokuapp.com/reviews";
+  const url = " https://car-rev-server.onrender.com/reviews";
   const { data, loading, update, setUpdate } = useDataLoad(url);
   const sliceReviews = data.slice(0, 3);
   return (

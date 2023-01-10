@@ -14,7 +14,7 @@ const StockUpdate = () => {
   const handleQuantity = async () => {
     const newQuantity = quantity - 1;
     const newSold = sold + 1;
-    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
+    const url = `https://car-rev-server.onrender.com/popularCars/${stockId}`;
     await axios.put(url, { newQuantity, newSold });
     setIsLoad(!isLoad);
   };
@@ -24,7 +24,7 @@ const StockUpdate = () => {
     const newSold = sold;
     const textQuantity = parseInt(event.target.quantity.value);
     const newQuantity = quantity + textQuantity;
-    const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${stockId}`;
+    const url = `https://car-rev-server.onrender.com/popularCars/${stockId}`;
     await axios.put(url, { newQuantity, newSold });
     setIsLoad(!isLoad);
     event.target.reset();

@@ -6,7 +6,7 @@ import "./SingleItem.css";
 const SingleItem = ({ car, cars, setCars, isTrue, setIstrue }) => {
   const { _id, picture, brand } = car;
   const handleDelete = async (id) => {
-    const url = `https://enigmatic-earth-44216.herokuapp.com/getCars/${id}`;
+    const url = `https://car-rev-server.onrender.com/getCars/${id}`;
     const confirm = window.confirm("Are you sure want to delete item?");
     if (confirm) {
       const { data } = await axios.delete(url);

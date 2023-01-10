@@ -8,7 +8,7 @@ import SinglePopularCar from "../SinglePopularCar/SinglePopularCar";
 import "./PopularCar.css";
 const PopularCar = () => {
   const navigate = useNavigate();
-  const url = "https://enigmatic-earth-44216.herokuapp.com/popularCars";
+  const url = "https://car-rev-server.onrender.com/popularCars";
   const { data, loading } = useDataLoad(url);
   const cars = data.slice(0, 6);
   return (

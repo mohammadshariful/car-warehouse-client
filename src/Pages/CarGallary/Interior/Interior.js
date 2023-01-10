@@ -5,7 +5,7 @@ import Loading from "../../Shared/Loading/Loading";
 import Car from "../Car/Car";
 const Interior = () => {
   const url =
-    "https://enigmatic-earth-44216.herokuapp.com/carGallary?catagory=interior";
+    "https://car-rev-server.onrender.com/carGallary?catagory=interior";
 
   const { data, loading } = useDataLoad(url);
 

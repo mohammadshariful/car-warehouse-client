@@ -8,7 +8,7 @@ const Inventory = ({ car, update, setUpdate, data, setData }) => {
     const processed = window.confirm("Are you sure want to delete?");
 
     if (processed) {
-      const url = `https://enigmatic-earth-44216.herokuapp.com/popularCars/${id}`;
+      const url = `https://car-rev-server.onrender.com/popularCars/${id}`;
       await axios.delete(url);
       const remaing = data.filter((car) => car._id !== id);
       setData(remaing);
