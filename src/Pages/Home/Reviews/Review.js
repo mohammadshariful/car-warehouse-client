@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import userImg from "../../../../Assets/Images/userImgPlaceholder.png";
-import "./SingleReview.css";
+
+import userImg from "../../../Assets/Images/userImgPlaceholder.png";
+
 const SingleReview = ({ review }) => {
   const { name, star, description, date } = review;
   let getStar;

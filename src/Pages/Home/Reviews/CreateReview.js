@@ -4,7 +4,9 @@ import { Button, FloatingLabel, Form, Modal } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { FaStar } from "react-icons/fa";
 import { toast } from "react-toastify";
-import auth from "../../../../Firebase/Firebase.init";
+
+import auth from "../../../Firebase/Firebase.init";
+
 const CreateReview = ({ update, setUpdate }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);

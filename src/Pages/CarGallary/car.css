@@ -1,0 +1,53 @@
+.cars-gallary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .link-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .custom-btn-link{
+    display: inline-block;
+    text-transform: uppercase;
+    border: 1px solid #6024eb;
+    background-color: #fff;
+    margin: 0 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  .category{
+    background-color: #6024eb;
+    color: #fff;
+  }
+  
+  
+  
+  .link {
+    background-color: #6024eb;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+
+.img-container {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    overflow: hidden;
+  }
+  .img-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: 0.3s ease-out;
+  }
+  .img-container:hover img {
+    transform: scale(1.5);
+  }

@@ -12,7 +12,8 @@ import useStateHandle from "../../Hooks/useStateHandle";
 import Loading from "../Shared/Loading/Loading";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
-import "./LogIn.css";
+
+import "./login.css";
 
 
 const LogIn = () => {

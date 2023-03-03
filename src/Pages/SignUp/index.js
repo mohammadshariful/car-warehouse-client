@@ -10,7 +10,9 @@ import useGenerateToken from "../../Hooks/useGenerateToken";
 import useStateHandle from "../../Hooks/useStateHandle";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
-import "./SingUp.css";
+
+import "./sing-up.css";
+
 const SingUp = () => {
   const navigate = useNavigate();
 

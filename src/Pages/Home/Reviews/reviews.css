@@ -1,3 +1,14 @@
+.reviews-container {
+  background-color: #fff;
+  border-radius: 8px;
+}
+.star {
+  color: #f7cd2e;
+}
+.star-container {
+  margin: 0;
+}
+
 .user-info {
   display: flex;
   align-items: center;
@@ -36,3 +47,4 @@
   font-weight: 100;
   cursor: pointer;
 }
+

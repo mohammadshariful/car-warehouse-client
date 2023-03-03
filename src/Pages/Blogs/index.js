@@ -8,7 +8,9 @@ import nodeVsJs from "../../Assets/Images/node-vs-js.jpg";
 import sqlVSnoSql from "../../Assets/Images/sql-vs-nosql.png";
 import Comments from "../Comments/Comments";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
-import "./Blogs.css";
+
+import "./blog.css";
+
 const Blogs = () => {
   return (
     <Container className="my-5 d-flex flex-column flex-md-row">

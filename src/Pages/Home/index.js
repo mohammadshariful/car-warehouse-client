@@ -2,7 +2,7 @@ import React from "react";
 import TitleChange from "./../Shared/TitleChangle/TitleChange";
 import Banner from "./Banner";
 import PopularCar from "./PopularCar";
-import Reviews from "./Reviews/Reviews/Reviews";
+import Reviews from "./Reviews";
 import SearchCar from "./SearchCar";
 import Sponsers from "./Sponsers";
 import UpcomingCar from "./UpcomingCar";

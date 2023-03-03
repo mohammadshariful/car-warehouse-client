@@ -5,7 +5,9 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { toast } from "react-toastify";
 import auth from "../../Firebase/Firebase.init";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
-import "./AddItems.css";
+
+import "./add-item.css";
+
 const AddItems = () => {
   const [user] = useAuthState(auth);
 
