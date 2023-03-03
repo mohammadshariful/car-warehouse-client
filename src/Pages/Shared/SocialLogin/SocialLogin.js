@@ -7,21 +7,25 @@ import { useLocation, useNavigate } from "react-router-dom";
 import facebook from "../../../Assets/Icons/icons8-facebook-30.png";
 import google from "../../../Assets/Icons/icons8-google-30.png";
 import auth from "../../../Firebase/Firebase.init";
+import useGenerateToken from "../../../Hooks/useGenerateToken";
 import Loading from "../../Shared/Loading/Loading";
 import "./SocialLogin.css";
+
 const SocialLogin = () => {
   const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
-  const [signInWithFacebook, user2, loading2, error2] =
-    useSignInWithFacebook(auth);
+  const [signInWithFacebook, user2, loading2, error2] = useSignInWithFacebook(auth);
+
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  const { token } = useGenerateToken(user1 || user2)
+
   useEffect(() => {
-    if (user1 || user2) {
+    if (token) {
       navigate(from, { replace: true });
     }
-  }, [user1, user2, from, navigate]);
+  }, [token, from, navigate]);
 
   if (loading1 || loading2) {
     return <Loading />;

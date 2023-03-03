@@ -1,0 +1,73 @@
+.single-popular-car-container {
+    background-color: #fff;
+    margin: 20px auto;
+    border-radius: 8px;
+    transition: 0.3s linear;
+  }
+  .single-popular-car-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .single-popular-car {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  .wraper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 0%;
+    background-color: #6b49bb60;
+    transition: 0.4s linear;
+  }
+  
+  .single-popular-car:hover .wraper {
+    height: 100%;
+    top: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .wraper-see-detils {
+    width: 100%;
+    border: 0;
+    padding: 8px 0;
+    color: #6024eb;
+    text-transform: uppercase;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .single-popular-car img {
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  .single-popular-car-info {
+    padding: 0 20px 20px;
+  }
+  .single-popular-car-info p {
+    margin: 0;
+    font-weight: 400;
+  }
+  .update-btn {
+    border: 1px solid #6024eb;
+    color: #fff;
+    background-color: #6024eb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: 0.3s linear;
+  }
+  .update-btn:hover {
+    color: #6024eb;
+    background-color: #fff;
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .update-btn {
+      padding: 6px;
+      font-size: 14px;
+    }
+  }
+  

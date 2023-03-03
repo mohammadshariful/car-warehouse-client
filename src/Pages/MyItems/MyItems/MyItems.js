@@ -1,28 +1,39 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { signOut } from "firebase/auth";
 import { Container, Row } from "react-bootstrap";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
 import TitleChange from "../../Shared/TitleChangle/TitleChange";
 import SingleItem from "../SingleItem/SingleItem";
 import "./MyItems.css";
 const MyItems = () => {
   const [user] = useAuthState(auth);
+  const navigate = useNavigate();
   const [cars, setCars] = useState([]);
-  const [isTrue, setIsTrue] = useState(false);
+  const [isReload, setReload] = useState(false);
+
   useEffect(() => {
     const getItems = async () => {
-      const email = user.email;
-      const url = `https://car-rev-server.onrender.com/getCars?email=${email}`;
-      const { data } = await axios.get(url, {
-        headers: {
-          authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-        },
-      });
-      setCars(data);
+      try {
+        const email = user.email;
+        const url = `https://car-rev-server-2023.onrender.com/api/v1/cars/my-car?email=${email}`;
+        const { data } = await axios.get(url, {
+          headers: { authorization: `Bearer ${localStorage.getItem("accessToken")}` },
+        });
+        setCars(data.data);
+      } catch (error) {
+        if (error.response.status === 403) {
+          localStorage.removeItem("accessToken");
+          signOut(auth);
+          navigate('/login');
+        }
+      }
     };
     getItems();
-  }, [isTrue]);
+
+  }, [user.email, navigate, isReload]);
 
   return (
     <Container className="my-5 " data-aos="fade-left">
@@ -38,10 +49,7 @@ const MyItems = () => {
             <SingleItem
               key={car._id}
               car={car}
-              cars={cars}
-              setCars={setCars}
-              isTrue={isTrue}
-              setIsTrue={setIsTrue}
+              setReload={setReload}
             />
           ))}
         </Row>

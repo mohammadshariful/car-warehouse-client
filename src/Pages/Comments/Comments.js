@@ -8,7 +8,7 @@ import useDataLoad from "../../Hooks/useDataLoad";
 import "./Comments.css";
 const Comments = () => {
   const [user] = useAuthState(auth);
-  const url = `https://car-rev-server.onrender.com/comment`;
+  const url = `https://car-rev-server-2023.onrender.com/api/v1/comments`;
 
   const { data, setData, setUpdate, update } = useDataLoad(url);
 
@@ -18,7 +18,7 @@ const Comments = () => {
     const text = event.target.comment.value;
     const comment = { userName, text };
     //
-    const url = `https://car-rev-server.onrender.com/comment`;
+    const url = `https://car-rev-server-2023.onrender.com/api/v1/comments`;
     await axios.post(url, comment);
     setUpdate(!update);
     event.target.reset();
@@ -27,7 +27,7 @@ const Comments = () => {
   const handleDelete = async (id) => {
     const processed = window.confirm("Are you sure want to delete?");
     if (processed) {
-      const url = `https://car-rev-server.onrender.com/comment/${id}`;
+      const url = `https://car-rev-server-2023.onrender.com/api/v1/comments/${id}`;
       await axios.delete(url);
 
       const remaining = data.filter((comment) => comment._id !== id);

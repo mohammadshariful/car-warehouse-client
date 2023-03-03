@@ -18,14 +18,17 @@ const CreateReview = ({ update, setUpdate }) => {
     const star = parseInt(event.target.star.value);
     const description = event.target.description.value;
     const reviewInfo = { name, description, star, date };
-    const url = " https://car-rev-server.onrender.com/reviews";
+    const url = "https://car-rev-server-2023.onrender.com/api/v1/reviews";
     await axios.post(url, reviewInfo);
     setUpdate(!update);
+
     toast.success("Review Added Successful", {
       position: toast.POSITION.TOP_CENTER,
     });
+
     handleClose();
   };
+
   return (
     <>
       <Button

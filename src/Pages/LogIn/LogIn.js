@@ -1,20 +1,20 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { Container, Form } from "react-bootstrap";
-import {
-  useSendPasswordResetEmail,
-  useSignInWithEmailAndPassword,
-} from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { FaUser } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import LogInImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
+import useGenerateToken from "../../Hooks/useGenerateToken";
 import useStateHandle from "../../Hooks/useStateHandle";
 import Loading from "../Shared/Loading/Loading";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./LogIn.css";
+
+
 const LogIn = () => {
   const [signInWithEmailAndPassword, user, , error] =
     useSignInWithEmailAndPassword(auth);
@@ -24,11 +24,14 @@ const LogIn = () => {
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
 
+  const { token } = useGenerateToken(user);
+
   useEffect(() => {
-    if (user) {
+    if (token) {
       navigate(from, { replace: true });
     }
-  }, [user, from, navigate]);
+  }, [from, navigate, token]);
+
 
   if (sending) {
     return <Loading />;
@@ -39,13 +42,6 @@ const LogIn = () => {
     const emailValue = email.value;
     const passwordValue = password.value;
     await signInWithEmailAndPassword(emailValue, passwordValue);
-    const { data } = await axios.post(
-      " https://car-rev-server.onrender.com/login",
-      {
-        emailValue,
-      }
-    );
-    localStorage.setItem("accessToken", data.accessToken);
   };
 
   const handlePasswordReset = async () => {
@@ -110,9 +106,7 @@ const LogIn = () => {
           <p className="text-center">
             You have no account? <Link to="/signup">SignUp</Link>
           </p>
-          <div>
-            <SocialLogin />
-          </div>
+          <SocialLogin />
         </div>
       </div>
     </Container>

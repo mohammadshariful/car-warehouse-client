@@ -8,8 +8,10 @@ import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./AddItems.css";
 const AddItems = () => {
   const [user] = useAuthState(auth);
+
   const handleItem = async (event) => {
     event.preventDefault();
+
     const email = user.email;
     const picture = event.target.url.value;
     const brand = event.target.brand.value;
@@ -17,27 +19,21 @@ const AddItems = () => {
     const price = event.target.price.value;
     const quantity = event.target.quantity.value;
     const providerName = event.target.providerName.value;
-    const carInfo = {
-      picture,
-      brand,
-      description,
-      price,
-      quantity,
-      providerName,
-      email,
-    };
 
-    const { data } = await axios.post(
-      "https://car-rev-server.onrender.com/popularCars",
-      carInfo
-    );
-    if (data.acknowledged) {
+    const carInfo = { picture, brand, description, price, quantity, providerName, email };
+
+    const { data } = await axios.post("https://car-rev-server-2023.onrender.com/api/v1/cars", carInfo);
+
+    if (data.success) {
       toast.success("Added a new item", {
         position: toast.POSITION.TOP_CENTER,
       });
       event.target.reset();
     }
   };
+
+
+
   return (
     <Container className="my-5 position-relative" data-aos="fade-right">
       <TitleChange title="Add Item" />

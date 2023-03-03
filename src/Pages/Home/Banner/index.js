@@ -3,7 +3,8 @@ import { FaAngleRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import TypeAnimation from "react-type-animation";
 import bannerImg from "../../../Assets/Images/bannerImg.png";
-import "./Banner.css";
+import "./banner.css";
+
 const Banner = () => {
   const navigate = useNavigate();
   return (

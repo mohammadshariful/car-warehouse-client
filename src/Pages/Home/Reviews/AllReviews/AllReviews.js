@@ -5,21 +5,22 @@ import Loading from "../../../Shared/Loading/Loading";
 import SingleReview from "../SingleReview/SingleReview";
 
 const AllReviews = () => {
-  const url = " https://car-rev-server.onrender.com/reviews";
+  const url = "https://car-rev-server-2023.onrender.com/api/v1/reviews";
   const { data, loading } = useDataLoad(url);
+
+  if (loading) {
+    return <Loading />
+  }
+
   return (
     <>
-      {loading ? (
-        <Loading />
-      ) : (
-        <Container className="my-5">
-          <Row>
-            {data.map((review) => (
-              <SingleReview key={review._id} review={review} />
-            ))}
-          </Row>
-        </Container>
-      )}
+      {data.length > 0 && <Container className="my-5">
+        <Row>
+          {data.map((review) => (
+            <SingleReview key={review._id} review={review} />
+          ))}
+        </Row>
+      </Container>}
     </>
   );
 };

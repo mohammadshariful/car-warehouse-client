@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
 import CustomLink from "../../CustomLink/CustomLink";
 import "./Header.css";
+
 const Header = () => {
   const [user] = useAuthState(auth);
   return (
@@ -33,10 +34,10 @@ const Header = () => {
                 <CustomLink to="/manageitems">Manage Items</CustomLink>
               </>
             )}
-            <CustomLink to="/carsgallary">Cars Gallary</CustomLink>
+            <CustomLink to="/car-gallary">Cars Gallary</CustomLink>
             <CustomLink to="/blogs">Blogs</CustomLink>
             {user ? (
-              <CustomLink to="/login" onClick={() => signOut(auth)}>
+              <CustomLink to="/login" onClick={() => { signOut(auth); localStorage.removeItem("accessToken") }}>
                 LogOut
               </CustomLink>
             ) : (

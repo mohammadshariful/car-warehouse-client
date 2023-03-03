@@ -3,17 +3,15 @@ import React from "react";
 import { Col } from "react-bootstrap";
 import { FaTrashAlt } from "react-icons/fa";
 import "./SingleItem.css";
-const SingleItem = ({ car, cars, setCars, isTrue, setIstrue }) => {
+const SingleItem = ({ car, setReload }) => {
   const { _id, picture, brand } = car;
   const handleDelete = async (id) => {
-    const url = `https://car-rev-server.onrender.com/getCars/${id}`;
+    const url = `https://car-rev-server-2023.onrender.com/api/v1/cars/${id}`;
     const confirm = window.confirm("Are you sure want to delete item?");
     if (confirm) {
       const { data } = await axios.delete(url);
-      if (data.deletedCount > 0) {
-        const remaing = cars.filter((car) => car._id !== id);
-        setCars(remaing);
-        setIstrue(!isTrue);
+      if (data.success) {
+        setReload(true)
       }
     }
   };

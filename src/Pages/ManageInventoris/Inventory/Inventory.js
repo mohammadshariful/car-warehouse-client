@@ -2,13 +2,15 @@ import axios from "axios";
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import "./Inventory.css";
+
 const Inventory = ({ car, update, setUpdate, data, setData }) => {
   const { _id, brand, picture, price, quantity } = car;
+
   const handleDelete = async (id) => {
     const processed = window.confirm("Are you sure want to delete?");
 
     if (processed) {
-      const url = `https://car-rev-server.onrender.com/popularCars/${id}`;
+      const url = `https://car-rev-server-2023.onrender.com/api/v1/cars/${id}`;
       await axios.delete(url);
       const remaing = data.filter((car) => car._id !== id);
       setData(remaing);

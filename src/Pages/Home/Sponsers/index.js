@@ -1,15 +1,19 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import "./sponsers.css";
+
 import { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import sponser1 from "../../../Assets/Sponser/logo1.jpg";
 import sponser2 from "../../../Assets/Sponser/logo2.jpg";
 import sponser3 from "../../../Assets/Sponser/logo3.jpg";
 import sponser4 from "../../../Assets/Sponser/logo4.jpg";
 import sponser5 from "../../../Assets/Sponser/logo5.jpg";
-import "./Sponsers.css";
+
+
 const Sponsers = () => {
   const sliderImg = [sponser1, sponser2, sponser3, sponser4, sponser5];
   return (
@@ -28,11 +32,9 @@ const Sponsers = () => {
         modules={[Autoplay]}
       >
         {sliderImg.map((img, index) => (
-          <>
-            <SwiperSlide key={index} className="swiper-content">
-              <img src={img} alt="" />
-            </SwiperSlide>
-          </>
+          <SwiperSlide key={index} className="swiper-content">
+            <img src={img} alt="" />
+          </SwiperSlide>
         ))}
       </Swiper>
     </Container>

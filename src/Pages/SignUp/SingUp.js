@@ -6,12 +6,15 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import singupImg from "../../Assets/Images/linear.jpg";
 import auth from "../../Firebase/Firebase.init";
+import useGenerateToken from "../../Hooks/useGenerateToken";
 import useStateHandle from "../../Hooks/useStateHandle";
 import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 import TitleChange from "../Shared/TitleChangle/TitleChange";
 import "./SingUp.css";
 const SingUp = () => {
   const navigate = useNavigate();
+
+
   const {
     email,
     password,
@@ -21,17 +24,19 @@ const SingUp = () => {
     handlePassword,
     handleConfirmPassword,
   } = useStateHandle();
+
   const [createUserWithEmailAndPassword, user, , error] =
     useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  const { token } = useGenerateToken(user)
+
+
   useEffect(() => {
-    if (user) {
+    if (token) {
+      toast.success("user signup successfull", { position: toast.POSITION.TOP_CENTER });
       navigate("/");
-      toast.success("user signup successfull", {
-        position: toast.POSITION.TOP_CENTER,
-      });
     }
-  }, [user, navigate]);
+  }, [token, navigate]);
 
   const submitHandle = (event) => {
     event.preventDefault();
@@ -108,9 +113,7 @@ const SingUp = () => {
           <p className="text-center">
             Already have an account? <Link to="/login">LogIn</Link>
           </p>
-          <div>
-            <SocialLogin />
-          </div>
+          <SocialLogin />
         </div>
       </div>
     </Container>

@@ -9,6 +9,23 @@
   justify-content: center;
   align-items: center;
 }
+.custom-btn-link{
+  display: inline-block;
+  text-transform: uppercase;
+  border: 1px solid #6024eb;
+  background-color: #fff;
+  margin: 0 5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.category{
+  background-color: #6024eb;
+  color: #fff;
+}
+
+
+
 .link {
   background-color: #6024eb;
   padding: 4px 8px;
