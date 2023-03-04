@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Container, Table } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import addIcon from "../../../Assets/Icons/icons8-add-30.png";
-import useDataLoad from "../../../Hooks/useDataLoad";
-import Loading from "../../Shared/Loading/Loading";
-import TitleChange from "../../Shared/TitleChangle/TitleChange";
-import Inventory from "../Inventory/Inventory";
-import "./ManageInventoris.css";
+import addIcon from "./../../Assets/Icons/icons8-add-30.png";
+import useDataLoad from "./../../Hooks/useDataLoad";
+import Loading from "./../Shared/Loading/Loading";
+import TitleChange from "./../Shared/TitleChangle/TitleChange";
+import Inventory from "./Inventory";
+
+import "./manage-inventoris.css";
+
 const ManageInventoris = () => {
+
   const [pageCount, setPageCount] = useState(0);
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(10);
@@ -17,6 +20,7 @@ const ManageInventoris = () => {
   const { data, setData, loading, setUpdate, update } = useDataLoad(url);
 
   useEffect(() => {
+
     fetch("https://car-rev-server-2023.onrender.com/api/v1/cars/car-count")
       .then((res) => res.json())
       .then((data) => {

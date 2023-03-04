@@ -5,10 +5,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { Link } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
 import CustomLink from "../../CustomLink/CustomLink";
-import "./Header.css";
 
-const Header = () => {
+import "./menu-bar.css";
+
+const MenuBar = () => {
+
   const [user] = useAuthState(auth);
+
   return (
     <Navbar
       collapseOnSelect
@@ -51,4 +54,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default MenuBar;

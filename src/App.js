@@ -5,13 +5,9 @@ import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import ManageInventoris from "./Pages/ManageInventoris/ManageInventoris/ManageInventoris";
-import Footer from "./Pages/Shared/Footer/Footer";
-import Header from "./Pages/Shared/Header/Header";
-import RequireAuth from "./Pages/Shared/RequireAuth/RequireAuth";
-import StockUpdate from "./Pages/StockUpdate/StockUpdate";
+import { Home, AllReviews, AddItems, MyItems, LogIn, SignUp, CarGallary, Blogs, ManageInventoris, StockUpdate, NotFound } from "./Pages";
 
-import { Home, AllReviews, AddItems, MyItems, LogIn, SignUp, CarGallary, Blogs, NotFound } from "./Pages"
+import { MenuBar, Footer, RequireAuth } from "./Pages/Shared";
 
 
 function App() {
@@ -21,7 +17,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <MenuBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/additem" element={<RequireAuth><AddItems /></RequireAuth>} />

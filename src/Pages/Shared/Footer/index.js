@@ -6,7 +6,10 @@ import phoneIcon from "../../../Assets/Icons/phone.png";
 import car1 from "../../../Assets/Images/pic1.jpg";
 import car2 from "../../../Assets/Images/pic2.jpg";
 import car3 from "../../../Assets/Images/pic3.jpg";
-import "./Footer.css";
+
+import "./footer.css";
+
+
 const Footer = () => {
   const date = new Date();
   const fullYear = date.getFullYear();

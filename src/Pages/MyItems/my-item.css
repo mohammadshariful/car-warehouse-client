@@ -18,6 +18,7 @@
     border-radius: 4px;
     padding: 8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
   }
   .item-img-container {
     width: 100%;
@@ -29,21 +30,42 @@
     object-fit: cover;
   }
   .delete-item {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #e21717;
-    background-color: #e21717;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: #fff;
+    color: #ff0002;
+    border-radius: 50%;
+    font-size: 14px;
+    opacity: 0;
+  }
+  .item-container:hover .delete-item{
+    opacity: 1;
+  }
+  .item-container h5{
+    margin-bottom: 0;
+    font-size: 15px ;
+  }
+
+  .item-container .item-info{
+    text-align: end;
+    margin-bottom: 0;
+  }
+  .item-container .item-info span{
+    display: block;
+    font-size: 14px;
+  }
+  .my-item-update-btn{
+    border: 1px solid #6024eb;
+    font-size: 13px;
+    border-radius: 3px;
     color: #fff;
-    padding: 4px 0;
-    margin-top: 10px;
-    border-radius: 4px;
+    padding: 1px 6px;
+    background-color: #6024eb;
+    transition: 0.3s linear
   }
-  .delete-item span {
-    margin: 0 8px;
+  .my-item-update-btn:hover{
+    background-color: #fff;
+    color: #6024eb;
   }
-  .delete-item:hover {
-    background-color: #c41e1ee0;
-  }
-  

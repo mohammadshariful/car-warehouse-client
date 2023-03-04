@@ -3,13 +3,18 @@ import React from "react";
 import { Container, Form } from "react-bootstrap";
 import { FaAngleRight } from "react-icons/fa";
 import { useNavigate, useParams } from "react-router-dom";
-import useUpdate from "../../Hooks/useUpdate";
-import "./StockUpdate.css";
+import useUpdate from "./../../../Hooks/useUpdate";
+import Loading from "./../../Shared/Loading/Loading"
+
+import "./stock-update.css";
+
 const StockUpdate = () => {
   const { stockId } = useParams();
   const navigate = useNavigate();
-  const { car, isLoad, setIsLoad } = useUpdate(stockId);
+
+  const { car, isLoad, setIsLoad, isLoading } = useUpdate(stockId);
   let { picture, brand, description, supplier, quantity, price, sold } = car;
+
   //handle Quantity
   const handleQuantity = async () => {
     const newQuantity = quantity - 1;
@@ -29,6 +34,11 @@ const StockUpdate = () => {
     setIsLoad(!isLoad);
     event.target.reset();
   };
+
+  if (isLoading) {
+    return <Loading />
+  }
+
 
   return (
     <Container className="my-5 stock-update-container">

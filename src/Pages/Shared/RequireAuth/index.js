@@ -2,8 +2,8 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { Navigate, useLocation } from "react-router-dom";
 import auth from "../../../Firebase/Firebase.init";
-import Loading from "../../Shared/Loading/Loading";
-import VerifyEmail from "../../VerifyEmail/VerifyEmail";
+import Loading from "../Loading/Loading";
+// import VerifyEmail from "../../VerifyEmail/VerifyEmail";
 
 const RequireAuth = ({ children }) => {
   const [user, loading] = useAuthState(auth);
@@ -17,9 +17,9 @@ const RequireAuth = ({ children }) => {
     return <Navigate to="/login" state={{ from: location }} replace />;
   }
 
-  if (user.providerData[0]?.providerId === "password" && !user.emailVerified) {
-    return <VerifyEmail />;
-  }
+  // if (user.providerData[0]?.providerId === "password" && !user.emailVerified) {
+  //   return <VerifyEmail />;
+  // }
 
   return children;
 };

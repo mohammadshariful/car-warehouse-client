@@ -1,7 +1,6 @@
 import axios from "axios";
 import React from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import "./Inventory.css";
 
 const Inventory = ({ car, update, setUpdate, data, setData }) => {
   const { _id, brand, picture, price, quantity } = car;

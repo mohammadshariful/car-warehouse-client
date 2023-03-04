@@ -47,7 +47,7 @@ const MyItems = () => {
                 </p>
                 <h6 className="text-center">Total add your item({cars.length})</h6>
                 <Row className="mt-3">
-                    {cars.map((car) => (<Item key={car._id} car={car} setReload={setReload} />))}
+                    {cars.map((car) => (<Item key={car._id} car={car} setCars={setCars} />))}
                 </Row>
             </div>
         </Container>
