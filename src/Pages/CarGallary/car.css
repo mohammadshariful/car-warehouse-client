@@ -8,15 +8,20 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 6px;
+    margin-top: 12px;
   }
   .custom-btn-link{
     display: inline-block;
     text-transform: uppercase;
     border: 1px solid #6024eb;
     background-color: #fff;
-    margin: 0 5px;
     padding: 4px 8px;
     border-radius: 4px;
+  }
+  .custom-btn-link:hover{
+    color: #fff;
+    background-color: #6024eb;
   }
   
   .category{

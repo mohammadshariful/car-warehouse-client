@@ -11,8 +11,7 @@ import "./footer.css";
 
 
 const Footer = () => {
-  const date = new Date();
-  const fullYear = date.getFullYear();
+
   return (
     <footer className="footer-container pt-4 mt-5">
       <Container className="pt-5">
@@ -137,8 +136,8 @@ const Footer = () => {
         </Row>
       </Container>
       <div className="coyright">
-        <p>
-          &copy; Copyright {fullYear} Car Rev Developed By Mohammad Shariful
+        <p className="copyright-user">
+          &copy; Copyright {new Date().getFullYear()} Car Rev Developed By Mohammad Shariful
         </p>
         <p className="copyright-link">
           <li>About Us</li>

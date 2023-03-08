@@ -13,10 +13,9 @@
   width: 50%;
   padding-left: 20px;
 }
-.banner-info h1 {
+.banner-info .Typewriter{
+  font-size: 1.5rem;
   white-space: nowrap;
-  font-size: 60px;
-  color: #ff2f9b;
 }
 .banner-info p {
   font-weight: 300;
@@ -56,9 +55,10 @@
     width: 100%;
     padding-left: 0;
   }
-  .banner-info h1 {
-    font-size: 20px;
+  .banner-info .Typewriter{
+    font-size: 1rem;
   }
+
   .banner-info p {
     font-size: 14px;
   }

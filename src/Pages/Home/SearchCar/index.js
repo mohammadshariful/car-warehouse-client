@@ -3,7 +3,7 @@ import { Button, Col, Form, Row } from "react-bootstrap";
 import "./searchCar.css";
 const SearchCar = () => {
     return (
-        <section className="my-5">
+        <section className="my-5 searcbar-container">
             <div className="search-container-bg">
                 <div className="search-container-bg-overly">
                     <h2 style={{ color: "#fff" }} className="text-center section-title ">
@@ -43,8 +43,7 @@ const SearchCar = () => {
                             />
                         </Form.Group>
                         <Button
-                            style={{ backgroundColor: "#6024EB" }}
-                            className="mx-auto d-block"
+                            className="mx-auto d-block subscribe-btn"
                         >
                             Sign up for stock alerts
                         </Button>

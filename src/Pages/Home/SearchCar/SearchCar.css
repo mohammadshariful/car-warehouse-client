@@ -12,3 +12,16 @@
   margin: 0 auto;
   padding: 40px 0;
 }
+.searcbar-container input{
+  border: 1px solid #6024EB;
+}
+.subscribe-btn{
+background-color: #6024EB;
+border: 1px solid #6024EB;
+}
+.subscribe-btn:hover,.subscribe-btn:focus{
+  border: 1px solid #fff;
+  color: #6024EB;
+  background-color: transparent;
+  outline: none;
+}

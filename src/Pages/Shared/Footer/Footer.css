@@ -1,7 +1,7 @@
 .footer-container {
   background-color: #5050ee;
   color: #f8f8f8de;
-  clip-path: ellipse(105% 100% at 63.75% 100%);
+  clip-path: ellipse(115% 100% at 63.75% 100%);
 }
 .footer-container h3 {
   font-weight: 300;
@@ -63,12 +63,18 @@ ul li {
   margin: 10px 0 0;
   background-color: #30323381;
 }
+.copyright-user{
+  margin-bottom: 0;
+}
 .copyright-link {
   display: flex;
+  margin-bottom: 0;
 }
 .copyright-link li {
   list-style: none;
+  white-space: nowrap;
   margin: 0 10px;
+  cursor: pointer;
 }
 @media only screen and (max-width: 576px) {
   .footer-container {
